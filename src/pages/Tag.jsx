@@ -1,14 +1,20 @@
-import React, { useState } from "react";
-import { Badge, TextInput } from "flowbite-react";
-import { HiSearch } from "react-icons/hi";
-import { useNavigate } from "react-router-dom";
-import { FcFinePrint } from "react-icons/fc";
+import React, {useState} from "react";
+import {Badge, TextInput} from "flowbite-react";
+import {HiSearch} from "react-icons/hi";
+import {useNavigate} from "react-router-dom";
+import {FcFinePrint} from "react-icons/fc";
 
 const dummyLogs = [
     {
         title: "클라우드란 무엇인가?",
         tags: ["클라우드 컴퓨팅", "온프레미스", "IaaS", "PaaS", "SaaS"],
         to: "whatIsCloud"
+    },
+    {
+        title: "EC2 인스턴스 생성",
+        tags: ["EC2",
+            "키 페어"],
+        to: "createEC2"
     },
 ];
 
@@ -40,7 +46,7 @@ const Tag = () => {
         <div>
             {/* 헤더 */}
             <h1 className="text-2xl font-bold mb-6 text-indigo-600 dark:text-sky-500">
-                <FcFinePrint className="inline-block mr-2 align-middle" />
+                <FcFinePrint className="inline-block mr-2 align-middle"/>
                 태그 및 키워드로 학습 기록 검색
             </h1>
 
