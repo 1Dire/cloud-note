@@ -17,8 +17,12 @@ const Day1 = () => {
                 <div>
                     <h2 className="text-xl font-semibold mb-2">✅ 오늘 할 일</h2>
                     <ul className="list-disc list-inside">
-                        <li>클라우드 개념 정리</li>
-                        <li>5개 용어 정리 (클라우드, IaaS, PaaS, SaaS, AWS)</li>
+                        <li>
+                            <del className="text-red-500">클라우드 개념 정리</del>
+                        </li>
+                        <li>
+                            <del className="text-red-500">5개 용어 정리 (클라우드, IaaS, PaaS, SaaS, AWS)</del>
+                        </li>
                     </ul>
                 </div>
             </div>
