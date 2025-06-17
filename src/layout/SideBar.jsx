@@ -75,6 +75,9 @@ const SideBar = ({isOpen, onClose}) => {
                                 <SidebarItem as={Link} to="/createEC2">
                                     EC2 인스턴스 생성
                                 </SidebarItem>
+                                <SidebarItem as={Link} to="/sshConection">
+                                   SSH 접속
+                                </SidebarItem>
                             </SidebarCollapse>
                         </SidebarItemGroup>
                     </SidebarItems>
