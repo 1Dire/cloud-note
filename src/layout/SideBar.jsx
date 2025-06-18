@@ -64,6 +64,9 @@ const SideBar = ({isOpen, onClose}) => {
                                 <SidebarItem as={Link} to="/day2">
                                     Day 2
                                 </SidebarItem>
+                                <SidebarItem as={Link} to="/day3">
+                                    Day 3
+                                </SidebarItem>
                             </SidebarCollapse>
                         </SidebarItemGroup>
 
@@ -77,6 +80,12 @@ const SideBar = ({isOpen, onClose}) => {
                                 </SidebarItem>
                                 <SidebarItem as={Link} to="/sshConection">
                                    SSH 접속
+                                </SidebarItem>
+                                <SidebarItem as={Link} to="/createRDS">
+                                    RDS 인스턴스 생성
+                                </SidebarItem>
+                                <SidebarItem as={Link} to="/rdsConection">
+                                    RDS 인스턴스 연결
                                 </SidebarItem>
                             </SidebarCollapse>
                         </SidebarItemGroup>
