@@ -16,6 +16,21 @@ const dummyLogs = [
             "키 페어"],
         to: "createEC2"
     },
+    {
+        title: "SSH 접속",
+        tags: ["SSH 접속"],
+        to: "sshConection"
+    },
+    {
+        title: "AWS RDS 인스턴스 생성",
+        tags: ["RDS", "MySQL", "DB 생성"],
+        to: "createRDS"
+    },
+    {
+        title: "EC2에서 RDS 접속하기",
+        tags: ["RDS", "MySQL", "EC2 연동"],
+        to: "rdsConection"
+    },
 ];
 
 const Tag = () => {

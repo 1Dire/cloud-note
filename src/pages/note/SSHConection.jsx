@@ -16,7 +16,6 @@ const BlockCode = ({children}) => (<pre
 const SSHConnection = () => {
     const tags = [
         "SSH 접속",
-
     ];
 
     return (<section className="space-y-10 text-gray-800 dark:text-gray-200 leading-relaxed">
