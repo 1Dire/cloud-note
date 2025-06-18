@@ -1,5 +1,6 @@
 import React from "react";
 import LightboxViewer from "../../components/LightboxViewer.jsx";
+import Tags from "../../components/Tags.jsx";
 
 // 인라인 코드 컴포넌트
 const InlineCode = ({children}) => (<code className="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm font-mono">
@@ -13,11 +14,19 @@ const BlockCode = ({children}) => (<pre
   </pre>);
 
 const SSHConnection = () => {
+    const tags = [
+        "SSH 접속",
+
+    ];
+
     return (<section className="space-y-10 text-gray-800 dark:text-gray-200 leading-relaxed">
         <h1 className="text-3xl font-bold mb-4 text-indigo-600 dark:text-sky-500">
-           SSH 접속
+            SSH 접속
         </h1>
-
+        {/* 태그 뱃지 */}
+        <div className="flex flex-wrap gap-2 mb-6">
+            <Tags tags={tags}/>
+        </div>
         <ol className="list-decimal list-inside space-y-8 pl-4">
             <li>
                 <strong className="text-lg font-semibold mb-2">SSH로 인스턴스 접속</strong>

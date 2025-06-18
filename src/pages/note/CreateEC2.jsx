@@ -15,8 +15,6 @@ const CreateEC2 = () => {
         "Ubuntu AMI",
         "키 페어 생성",
         "보안 그룹",
-        "프리티어",
-        "SSH 접속"
     ];
 
     return (
