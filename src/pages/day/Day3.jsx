@@ -1,21 +1,10 @@
 import React from "react";
-import LightboxViewer from "../../components/LightboxViewer.jsx";
-import Tags from "../../components/Tags.jsx";
+import BlockCode from "../../components/BlockCode.jsx";
+import InlineCode from "../../components/InlineCode.jsx";
 
-const InlineCode = ({children}) => (
-    <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded text-sm font-mono">{children}</code>
-);
-
-const BlockCode = ({children}) => (
-    <pre
-        className="bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100 text-sm p-4 rounded-md overflow-x-auto font-mono my-2">
-    <code>{children}</code>
-  </pre>
-);
 
 const Day3 = () => {
-    return (
-        <section className="space-y-10 text-gray-800 dark:text-gray-200 leading-relaxed">
+    return (<section className="space-y-10 text-gray-800 dark:text-gray-200 leading-relaxed">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500">
                 Day 3 – EC2 + RDS 연동 실습
             </h1>
@@ -97,8 +86,7 @@ SELECT * FROM users;`}
                     </li>
                 </ul>
             </div>
-        </section>
-    );
+        </section>);
 };
 
 export default Day3;

@@ -50,9 +50,9 @@ const Day2 = () => {
                 <div>
                     <h2 className="text-xl font-semibold mb-2">✅ 오늘 할 일</h2>
                     <ul className="list-disc list-inside">
-                        <li><del className="text-red-500">EC2 인스턴스 생성 및 SSH 접속</del></li>
-                        <li><del className="text-red-500">S3 버킷 생성 및 정적 웹사이트 배포</del></li>
-                        <li><del className="text-red-500">브라우저에서 HTML 페이지 정상 출력</del></li>
+                        <li>EC2 인스턴스 생성 및 SSH 접속</li>
+                        <li>S3 버킷 생성 및 정적 웹사이트 배포</li>
+                        <li>브라우저에서 HTML 페이지 정상 출력</li>
                     </ul>
                 </div>
             </div>

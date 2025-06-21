@@ -57,7 +57,7 @@ const SideBar = ({ isOpen, onClose }) => {
                             <SidebarItem
                                 as={Link}
                                 to="/"
-                                icon={IoMdPricetag}
+                                icon={() => <IoMdPricetag className={pathname === "/" ? "text-white" : ""} />}
                                 className={pathname === "/" ? activeClass : ""}
                                 onClick={onClose}
                             >
@@ -91,6 +91,14 @@ const SideBar = ({ isOpen, onClose }) => {
                                 >
                                     Day 3
                                 </SidebarItem>
+                                <SidebarItem
+                                    as={Link}
+                                    to="/day4"
+                                    className={pathname === "/day4" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    Day 4
+                                </SidebarItem>
                             </SidebarCollapse>
                         </SidebarItemGroup>
 
@@ -122,7 +130,7 @@ const SideBar = ({ isOpen, onClose }) => {
                                 </SidebarItem>
                                 <SidebarItem
                                     as={Link}
-                                    to="/createRDS"
+                                    to="/createRDS"dd
                                     className={pathname === "/createRDS" ? activeClass : ""}
                                     onClick={onClose}
                                 >
@@ -135,6 +143,14 @@ const SideBar = ({ isOpen, onClose }) => {
                                     onClick={onClose}
                                 >
                                     RDS 인스턴스 연결
+                                </SidebarItem>
+                                <SidebarItem
+                                    as={Link}
+                                    to="/whatIsDocker"
+                                    className={pathname === "/whatIsDocker" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    도커란 무엇인가?
                                 </SidebarItem>
                             </SidebarCollapse>
                         </SidebarItemGroup>
