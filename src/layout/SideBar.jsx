@@ -99,6 +99,14 @@ const SideBar = ({ isOpen, onClose }) => {
                                 >
                                     Day 4
                                 </SidebarItem>
+                                <SidebarItem
+                                    as={Link}
+                                    to="/day5"
+                                    className={pathname === "/day5" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    Day 5
+                                </SidebarItem>
                             </SidebarCollapse>
                         </SidebarItemGroup>
 
@@ -130,7 +138,7 @@ const SideBar = ({ isOpen, onClose }) => {
                                 </SidebarItem>
                                 <SidebarItem
                                     as={Link}
-                                    to="/createRDS"dd
+                                    to="/createRDS"
                                     className={pathname === "/createRDS" ? activeClass : ""}
                                     onClick={onClose}
                                 >
@@ -151,6 +159,14 @@ const SideBar = ({ isOpen, onClose }) => {
                                     onClick={onClose}
                                 >
                                     도커란 무엇인가?
+                                </SidebarItem>
+                                <SidebarItem
+                                    as={Link}
+                                    to="/whatIsKubernetes"
+                                    className={pathname === "/whatIsKubernetes" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    쿠버네티스란 무엇인가?
                                 </SidebarItem>
                             </SidebarCollapse>
                         </SidebarItemGroup>

@@ -35,6 +35,11 @@ const dummyLogs = [
         tags: ["Docker", "이미지", "컨테이너", "볼륨", "명령어"],
         to: "whatIsDocker",
     },
+    {
+        title: "쿠버네티스란 무엇인가",
+        tags: ["Kubernetes", "컨테이너", "오케스트레이션", "클러스터", "DevOps"],
+        to: "whatIsKubernetes",
+    },
 ];
 
 const Tag = () => {
