@@ -107,6 +107,14 @@ const SideBar = ({ isOpen, onClose }) => {
                                 >
                                     Day 5
                                 </SidebarItem>
+                                <SidebarItem
+                                    as={Link}
+                                    to="/day6"
+                                    className={pathname === "/day6" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    Day 6
+                                </SidebarItem>
                             </SidebarCollapse>
                         </SidebarItemGroup>
 
@@ -167,6 +175,31 @@ const SideBar = ({ isOpen, onClose }) => {
                                     onClick={onClose}
                                 >
                                     쿠버네티스란 무엇인가?
+                                </SidebarItem>
+                                <SidebarItem
+                                    as={Link}
+                                    to="/podAndService"
+                                    className={pathname === "/podAndService" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    쿠버네티스의 파드와 서비스
+                                </SidebarItem>
+                                <SidebarItem
+                                    as={Link}
+                                    to="/replicaSetAndDeployment"
+                                    className={pathname === "/replicaSetAndDeployment" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    ReplicaSet과 <br/> Deployment란?
+                                </SidebarItem>
+
+                                <SidebarItem
+                                    as={Link}
+                                    to="/kubernetesSummary"
+                                    className={pathname === "/kubernetesSummary" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    쿠버네티스 핵심 리소스  <br/>한눈에 보기
                                 </SidebarItem>
                             </SidebarCollapse>
                         </SidebarItemGroup>
