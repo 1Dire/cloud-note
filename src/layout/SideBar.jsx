@@ -115,6 +115,14 @@ const SideBar = ({ isOpen, onClose }) => {
                                 >
                                     Day 6
                                 </SidebarItem>
+                                <SidebarItem
+                                    as={Link}
+                                    to="/day7"
+                                    className={pathname === "/day7" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    Day 7
+                                </SidebarItem>
                             </SidebarCollapse>
                         </SidebarItemGroup>
 
@@ -200,6 +208,14 @@ const SideBar = ({ isOpen, onClose }) => {
                                     onClick={onClose}
                                 >
                                     쿠버네티스 핵심 리소스  <br/>한눈에 보기
+                                </SidebarItem>
+                                <SidebarItem
+                                    as={Link}
+                                    to="/whatIsMinikube"
+                                    className={pathname === "/whatIsMinikube" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    Minikube란 무엇인가?
                                 </SidebarItem>
                             </SidebarCollapse>
                         </SidebarItemGroup>

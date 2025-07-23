@@ -17,6 +17,8 @@ import WhatIsKubernetes from "./pages/note/WhatIsKubernetes.jsx";
 import PodAndService from "./pages/note/PodAndService.jsx";
 import ReplicaSetAndDeployment from "./pages/note/ReplicaSetAndDeployment.jsx";
 import KubernetesSummary from "./pages/note/KubernetesSummary.jsx";
+import WhatIsMinikube from "./pages/note/WhatIsMinikube.jsx";
+
 function App() {
     return (<BrowserRouter>
             <Routes>
@@ -39,6 +41,7 @@ function App() {
                     <Route path="/podAndService" element={<PodAndService/>}/>
                     <Route path="/replicaSetAndDeployment" element={<ReplicaSetAndDeployment/>}/>
                     <Route path="/kubernetesSummary" element={<KubernetesSummary/>}/>
+                    <Route path="/whatIsMinikube" element={<WhatIsMinikube/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>);

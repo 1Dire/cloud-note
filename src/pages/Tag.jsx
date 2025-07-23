@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { Badge, TextInput } from "flowbite-react";
-import { HiSearch } from "react-icons/hi";
-import { useNavigate } from "react-router-dom";
-import { FcFinePrint } from "react-icons/fc";
+import React, {useState} from "react";
+import {Badge, TextInput} from "flowbite-react";
+import {HiSearch} from "react-icons/hi";
+import {useNavigate} from "react-router-dom";
+import {FcFinePrint} from "react-icons/fc";
 
 const dummyLogs = [
     {
@@ -40,6 +40,23 @@ const dummyLogs = [
         tags: ["Kubernetes", "컨테이너", "오케스트레이션", "클러스터", "DevOps"],
         to: "whatIsKubernetes",
     },
+    {
+        title: "쿠버네티스의 파드와 서비스",
+        tags: ["Kubernetes", "Pod", "Service", "로드밸런서", "클러스터"],
+        to: "podAndService",
+    },
+    {
+        title: "ReplicaSet과 Deployment란?",
+        tags: ["Kubernetes", "ReplicaSet", "Deployment", "레플리카", "오케스트레이션"],
+        to: "replicaSetAndDeployment",
+    },
+    {
+        title: "쿠버네티스 핵심 리소스 한눈에 보기",
+        tags: ["Kubernetes", "리소스", "개념정리", "DevOps", "운영"],
+        to: "kubernetesSummary",
+    },
+
+
 ];
 
 const Tag = () => {
@@ -70,7 +87,7 @@ const Tag = () => {
     return (
         <div>
             <h1 className="text-2xl font-bold mb-6 text-indigo-600 dark:text-sky-500">
-                <FcFinePrint className="inline-block mr-2 align-middle" />
+                <FcFinePrint className="inline-block mr-2 align-middle"/>
                 태그 및 키워드로 학습 기록 검색
             </h1>
 
@@ -84,7 +101,6 @@ const Tag = () => {
                     sizing="md"
                 />
             </div>
-
 
 
             <ul className="space-y-4">
