@@ -7,6 +7,7 @@ import Day3 from "./pages/day/Day3.jsx";
 import Day4 from "./pages/day/Day4.jsx";
 import Day5 from "./pages/day/Day5.jsx";
 import Day6 from "./pages/day/Day6.jsx";
+import Day7 from "./pages/day/Day7.jsx";
 import WhatIsCloud from "./pages/note/WhatIsCloud.jsx";
 import CreateEC2 from "./pages/note/CreateEC2.jsx";
 import SSHConection from "./pages/note/SSHConection.jsx";
@@ -33,6 +34,7 @@ function App() {
                 <Route path="/day4" element={<Day4/>}/>
                 <Route path="/day5" element={<Day5/>}/>
                 <Route path="/day6" element={<Day6/>}/>
+                <Route path="/day7" element={<Day7/>}/>
                 <Route path="/whatIsCloud" element={<WhatIsCloud/>}/>
                 <Route path="/createEC2" element={<CreateEC2/>}/>
                 <Route path="/sshConection" element={<SSHConection/>}/>
