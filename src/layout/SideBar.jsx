@@ -16,13 +16,13 @@ import {
     HiViewBoards,
 } from "react-icons/hi";
 
-import { IoMdPricetag } from "react-icons/io";
-import { Link, useLocation } from "react-router-dom";
-import { LuNotebookPen } from "react-icons/lu";
-import { FaPenClip } from "react-icons/fa6";
+import {IoMdPricetag} from "react-icons/io";
+import {Link, useLocation} from "react-router-dom";
+import {LuNotebookPen} from "react-icons/lu";
+import {FaPenClip} from "react-icons/fa6";
 
-const SideBar = ({ isOpen, onClose }) => {
-    const { pathname } = useLocation();
+const SideBar = ({isOpen, onClose}) => {
+    const {pathname} = useLocation();
 
     const activeClass = "!text-white !bg-indigo-600 dark:!bg-sky-600";
 
@@ -46,8 +46,9 @@ const SideBar = ({ isOpen, onClose }) => {
             >
                 <Sidebar aria-label="Sidebar Navigation" className="h-full">
                     {/* 로고 */}
-                    <div className="px-4 py-6 flex items-center justify-center mb-6 gap-2 border-b border-gray-200 dark:border-gray-600">
-                        <img src="/logo.png" alt="App Logo" className="w-15 h-15" />
+                    <div
+                        className="px-4 py-6 flex items-center justify-center mb-6 gap-2 border-b border-gray-200 dark:border-gray-600">
+                        <img src="/logo.png" alt="App Logo" className="w-15 h-15"/>
                         <span className="text-indigo-500 font-bold text-xl">Dire</span>
                         <span className="text-sky-500 font-bold text-xl">Note</span>
                     </div>
@@ -57,7 +58,7 @@ const SideBar = ({ isOpen, onClose }) => {
                             <SidebarItem
                                 as={Link}
                                 to="/"
-                                icon={() => <IoMdPricetag className={pathname === "/" ? "text-white" : ""} />}
+                                icon={() => <IoMdPricetag className={pathname === "/" ? "text-white" : ""}/>}
                                 className={pathname === "/" ? activeClass : ""}
                                 onClick={onClose}
                             >
@@ -207,7 +208,7 @@ const SideBar = ({ isOpen, onClose }) => {
                                     className={pathname === "/kubernetesSummary" ? activeClass : ""}
                                     onClick={onClose}
                                 >
-                                    쿠버네티스 핵심 리소스  <br/>한눈에 보기
+                                    쿠버네티스 핵심 리소스 <br/>한눈에 보기
                                 </SidebarItem>
                                 <SidebarItem
                                     as={Link}
@@ -216,6 +217,25 @@ const SideBar = ({ isOpen, onClose }) => {
                                     onClick={onClose}
                                 >
                                     Minikube란 무엇인가?
+                                </SidebarItem>
+
+                                <SidebarItem
+                                    as={Link}
+                                    to="/kopsOnAWS"
+                                    className={pathname === "/kopsOnAWS" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    Kops로 AWS에 쿠버네티스<br/>클러스터 구성하기
+                                </SidebarItem>
+
+
+                                <SidebarItem
+                                    as={Link}
+                                    to="/kopsSetupGuide"
+                                    className={pathname === "/kopsSetupGuide" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    Kops 클러스터 구성 <br/> AWS & DNS 설정 가이드
                                 </SidebarItem>
                             </SidebarCollapse>
                         </SidebarItemGroup>

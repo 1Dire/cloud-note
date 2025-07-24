@@ -18,33 +18,37 @@ import PodAndService from "./pages/note/PodAndService.jsx";
 import ReplicaSetAndDeployment from "./pages/note/ReplicaSetAndDeployment.jsx";
 import KubernetesSummary from "./pages/note/KubernetesSummary.jsx";
 import WhatIsMinikube from "./pages/note/WhatIsMinikube.jsx";
+import KopsOnAWS from "./pages/note/KopsOnAWS.jsx";
+import KopsSetupGuide from "./pages/note/KopsSetupGuide.jsx";
 
 function App() {
     return (<BrowserRouter>
-            <Routes>
-                {/* 부모 라우트: Layout 안에 Outlet 포함 */}
-                <Route path="/" element={<Layout/>}>
-                    <Route index element={<Tag/>}/>
-                    <Route path="/day1" element={<Day1/>}/>
-                    <Route path="/day2" element={<Day2/>}/>
-                    <Route path="/day3" element={<Day3/>}/>
-                    <Route path="/day4" element={<Day4/>}/>
-                    <Route path="/day5" element={<Day5/>}/>
-                    <Route path="/day6" element={<Day6/>}/>
-                    <Route path="/whatIsCloud" element={<WhatIsCloud/>}/>
-                    <Route path="/createEC2" element={<CreateEC2/>}/>
-                    <Route path="/sshConection" element={<SSHConection/>}/>
-                    <Route path="/createRDS" element={<CreateRDS/>}/>
-                    <Route path="/rdsConection" element={<RDSConnection/>}/>
-                    <Route path="/whatIsDocker" element={<WhatIsDocker/>}/>
-                    <Route path="/whatIsKubernetes" element={<WhatIsKubernetes/>}/>
-                    <Route path="/podAndService" element={<PodAndService/>}/>
-                    <Route path="/replicaSetAndDeployment" element={<ReplicaSetAndDeployment/>}/>
-                    <Route path="/kubernetesSummary" element={<KubernetesSummary/>}/>
-                    <Route path="/whatIsMinikube" element={<WhatIsMinikube/>}/>
-                </Route>
-            </Routes>
-        </BrowserRouter>);
+        <Routes>
+            {/* 부모 라우트: Layout 안에 Outlet 포함 */}
+            <Route path="/" element={<Layout/>}>
+                <Route index element={<Tag/>}/>
+                <Route path="/day1" element={<Day1/>}/>
+                <Route path="/day2" element={<Day2/>}/>
+                <Route path="/day3" element={<Day3/>}/>
+                <Route path="/day4" element={<Day4/>}/>
+                <Route path="/day5" element={<Day5/>}/>
+                <Route path="/day6" element={<Day6/>}/>
+                <Route path="/whatIsCloud" element={<WhatIsCloud/>}/>
+                <Route path="/createEC2" element={<CreateEC2/>}/>
+                <Route path="/sshConection" element={<SSHConection/>}/>
+                <Route path="/createRDS" element={<CreateRDS/>}/>
+                <Route path="/rdsConection" element={<RDSConnection/>}/>
+                <Route path="/whatIsDocker" element={<WhatIsDocker/>}/>
+                <Route path="/whatIsKubernetes" element={<WhatIsKubernetes/>}/>
+                <Route path="/podAndService" element={<PodAndService/>}/>
+                <Route path="/replicaSetAndDeployment" element={<ReplicaSetAndDeployment/>}/>
+                <Route path="/kubernetesSummary" element={<KubernetesSummary/>}/>
+                <Route path="/whatIsMinikube" element={<WhatIsMinikube/>}/>
+                <Route path="/kopsOnAWS" element={<KopsOnAWS/>}/>
+                <Route path="/kopsSetupGuide" element={<KopsSetupGuide/>}/>
+            </Route>
+        </Routes>
+    </BrowserRouter>);
 }
 
 export default App;

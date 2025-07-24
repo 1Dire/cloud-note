@@ -55,6 +55,16 @@ const dummyLogs = [
         tags: ["Kubernetes", "리소스", "개념정리", "DevOps", "운영"],
         to: "kubernetesSummary",
     },
+    {
+        title: "Kops로 AWS에 쿠버네티스 클러스터 구성하기",
+        tags: ["Kops", "Kubernetes", "AWS", "클러스터", "Vagrant"],
+        to: "kopsOnAWS",
+    },
+    {
+        title: "Kops 클러스터 구성 – AWS & DNS 설정 가이드",
+        tags: ["Kops", "Kubernetes", "AWS", "클러스터", "Vagrant", "DNS"],
+        to: "kopsSetupGuide",
+    },
 
 
 ];
