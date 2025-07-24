@@ -2,7 +2,7 @@ import React from "react";
 import Tags from "../../components/Tags.jsx";
 
 const Day6 = () => {
-    const tags = ["Kubernetes", "리소스", "ReplicaSet", "Deployment", "StatefulSet", "Job"];
+
 
     return (
         <section className="space-y-10 text-gray-800 dark:text-gray-200 leading-relaxed">
@@ -10,9 +10,7 @@ const Day6 = () => {
                 Day 6 – 쿠버네티스 리소스 관리
             </h1>
 
-            <div className="flex flex-wrap gap-2 mb-6">
-                <Tags tags={tags}/>
-            </div>
+
 
             <div>
                 <h2 className="text-xl font-semibold">📖 오늘 학습한 개념</h2>
