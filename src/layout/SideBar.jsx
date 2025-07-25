@@ -20,6 +20,7 @@ import {IoMdPricetag} from "react-icons/io";
 import {Link, useLocation} from "react-router-dom";
 import {LuNotebookPen} from "react-icons/lu";
 import {FaPenClip} from "react-icons/fa6";
+import KubernetesAdvancedDemo from "../pages/note/KubernetesAdvancedDemo.jsx";
 
 const SideBar = ({isOpen, onClose}) => {
     const {pathname} = useLocation();
@@ -237,7 +238,18 @@ const SideBar = ({isOpen, onClose}) => {
                                 >
                                     Kops 클러스터 구성 <br/> AWS & DNS 설정 가이드
                                 </SidebarItem>
+                                <SidebarItem
+                                    as={Link}
+                                    to="/kubernetesAdvancedDemo"
+                                    className={pathname === "/kubernetesAdvancedDemo" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    쿠버네티스고급 명령어 및  <br/>클러스터 내 통신
+                                </SidebarItem>
                             </SidebarCollapse>
+
+
+
                         </SidebarItemGroup>
                     </SidebarItems>
                 </Sidebar>
