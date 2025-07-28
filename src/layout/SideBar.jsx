@@ -21,6 +21,7 @@ import {Link, useLocation} from "react-router-dom";
 import {LuNotebookPen} from "react-icons/lu";
 import {FaPenClip} from "react-icons/fa6";
 import KubernetesAdvancedDemo from "../pages/note/KubernetesAdvancedDemo.jsx";
+import ReplicationControllerDemo from "../pages/note/ReplicationControllerDemo.jsx";
 
 const SideBar = ({isOpen, onClose}) => {
     const {pathname} = useLocation();
@@ -245,6 +246,15 @@ const SideBar = ({isOpen, onClose}) => {
                                     onClick={onClose}
                                 >
                                     쿠버네티스고급 명령어 및  <br/>클러스터 내 통신
+                                </SidebarItem>
+
+                                <SidebarItem
+                                    as={Link}
+                                    to="/replicationControllerDemo"
+                                    className={pathname === "/replicationControllerDemo" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    ReplicationController <br/>수평 확장 데모
                                 </SidebarItem>
                             </SidebarCollapse>
 

@@ -22,6 +22,7 @@ import WhatIsMinikube from "./pages/note/WhatIsMinikube.jsx";
 import KopsOnAWS from "./pages/note/KopsOnAWS.jsx";
 import KopsSetupGuide from "./pages/note/KopsSetupGuide.jsx";
 import KubernetesAdvancedDemo from "./pages/note/KubernetesAdvancedDemo.jsx";
+import ReplicationControllerDemo from "./pages/note/ReplicationControllerDemo";
 function App() {
     return (<BrowserRouter>
         <Routes>
@@ -49,6 +50,8 @@ function App() {
                 <Route path="/kopsOnAWS" element={<KopsOnAWS/>}/>
                 <Route path="/kopsSetupGuide" element={<KopsSetupGuide/>}/>
                 <Route path="/kubernetesAdvancedDemo" element={<KubernetesAdvancedDemo/>}/>
+                <Route path="/replicationControllerDemo" element={<ReplicationControllerDemo/>}/>
+
             </Route>
         </Routes>
     </BrowserRouter>);

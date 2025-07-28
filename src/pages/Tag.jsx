@@ -65,6 +65,17 @@ const dummyLogs = [
         tags: ["Kops", "Kubernetes", "AWS", "클러스터", "Vagrant", "DNS"],
         to: "kopsSetupGuide",
     },
+    {
+        title: "ReplicationController 수평 확장 데모",
+        tags: [
+            "Kubernetes",
+            "ReplicationController",
+            "ReplicaSet",
+            "파드",
+            "수평확장"
+        ],
+        to: "replicationControllerDemo",
+    },
 
 
 ];
