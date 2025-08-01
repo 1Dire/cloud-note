@@ -24,6 +24,7 @@ import KubernetesAdvancedDemo from "../pages/note/KubernetesAdvancedDemo.jsx";
 import ReplicationControllerDemo from "../pages/note/ReplicationControllerDemo.jsx";
 import PodStatus from "../pages/note/PodStatus.jsx";
 import PodLifecycle from "../pages/note/PodLifecycle.jsx";
+import Secret from "../pages/note/Secret.jsx";
 
 const SideBar = ({isOpen, onClose}) => {
     const {pathname} = useLocation();
@@ -247,7 +248,7 @@ const SideBar = ({isOpen, onClose}) => {
                                     className={pathname === "/kubernetesAdvancedDemo" ? activeClass : ""}
                                     onClick={onClose}
                                 >
-                                    쿠버네티스고급 명령어 및  <br/>클러스터 내 통신
+                                    쿠버네티스고급 명령어 및 <br/>클러스터 내 통신
                                 </SidebarItem>
 
                                 <SidebarItem
@@ -291,8 +292,16 @@ const SideBar = ({isOpen, onClose}) => {
                                     파드 수명 주기
                                 </SidebarItem>
 
-                            </SidebarCollapse>
+                                <SidebarItem
+                                    as={Link}
+                                    to="/secret"
+                                    className={pathname === "/secret" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    쿠버네티스 시크릿
+                                </SidebarItem>
 
+                            </SidebarCollapse>
 
 
                         </SidebarItemGroup>

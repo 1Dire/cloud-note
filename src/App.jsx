@@ -27,6 +27,7 @@ import Healthcheck from "./pages/note/HealthCheck.jsx";
 import LivenessReadiness from "./pages/note/LivenessReadiness.jsx";
 import PodStatus from "./pages/note/PodStatus.jsx";
 import PodLifecycle from "./pages/note/PodLifecycle.jsx";
+import Secret from "./pages/note/Secret.jsx";
 
 function App() {
     return (<BrowserRouter>
@@ -60,7 +61,7 @@ function App() {
                 <Route path="/livenessReadiness" element={<LivenessReadiness/>}/>
                 <Route path="/podStatus" element={<PodStatus/>}/>
                 <Route path="/podLifecycle" element={<PodLifecycle/>}/>
-
+                <Route path="/secret" element={<Secret/>}/>
             </Route>
         </Routes>
     </BrowserRouter>);
