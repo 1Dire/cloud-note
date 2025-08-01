@@ -3,6 +3,7 @@ import {Badge, TextInput} from "flowbite-react";
 import {HiSearch} from "react-icons/hi";
 import {useNavigate} from "react-router-dom";
 import {FcFinePrint} from "react-icons/fc";
+import PodLifecycle from "./note/PodLifecycle.jsx";
 
 const dummyLogs = [
     {
@@ -76,6 +77,55 @@ const dummyLogs = [
         ],
         to: "replicationControllerDemo",
     },
+    {
+        title: "헬스 체크",
+        tags: [
+            "Kubernetes",
+            "Deployment",
+            "헬스체크",
+            "livenessProbe",
+            "프로덕션 안정성"
+        ],
+        to: "healthCheck",
+    },
+    {
+        title: "파드(Pod)의 상태 이해하기",
+        tags: [
+            "Kubernetes",
+            "livenessProbe",
+            "readinessProbe",
+            "헬스체크",
+            "서비스 안정성"
+        ],
+        to: "livenessReadiness",
+    },
+    {
+        title: "Liveness 와 Readiness Probe",
+        tags: [
+            "Kubernetes",
+            "Pod 상태",
+            "파드 수명주기",
+            "컨테이너 상태",
+            "디버깅"
+        ],
+        to: "podStatus",
+    },
+
+    {
+        title: "파드 수명 주기(Pod Lifecycle)",
+        tags: [
+            "Kubernetes",
+            "Pod Lifecycle",
+            "Init Container",
+            "postStart",
+            "preStop",
+            "LivenessProbe",
+            "ReadinessProbe"
+        ],
+        to: "podLifecycle",
+    },
+
+
 
 
 ];

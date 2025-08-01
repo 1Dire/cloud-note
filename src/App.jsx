@@ -23,6 +23,11 @@ import KopsOnAWS from "./pages/note/KopsOnAWS.jsx";
 import KopsSetupGuide from "./pages/note/KopsSetupGuide.jsx";
 import KubernetesAdvancedDemo from "./pages/note/KubernetesAdvancedDemo.jsx";
 import ReplicationControllerDemo from "./pages/note/ReplicationControllerDemo";
+import Healthcheck from "./pages/note/HealthCheck.jsx";
+import LivenessReadiness from "./pages/note/LivenessReadiness.jsx";
+import PodStatus from "./pages/note/PodStatus.jsx";
+import PodLifecycle from "./pages/note/PodLifecycle.jsx";
+
 function App() {
     return (<BrowserRouter>
         <Routes>
@@ -51,6 +56,10 @@ function App() {
                 <Route path="/kopsSetupGuide" element={<KopsSetupGuide/>}/>
                 <Route path="/kubernetesAdvancedDemo" element={<KubernetesAdvancedDemo/>}/>
                 <Route path="/replicationControllerDemo" element={<ReplicationControllerDemo/>}/>
+                <Route path="/healthcheck" element={<Healthcheck/>}/>
+                <Route path="/livenessReadiness" element={<LivenessReadiness/>}/>
+                <Route path="/podStatus" element={<PodStatus/>}/>
+                <Route path="/podLifecycle" element={<PodLifecycle/>}/>
 
             </Route>
         </Routes>

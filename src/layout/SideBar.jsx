@@ -22,6 +22,8 @@ import {LuNotebookPen} from "react-icons/lu";
 import {FaPenClip} from "react-icons/fa6";
 import KubernetesAdvancedDemo from "../pages/note/KubernetesAdvancedDemo.jsx";
 import ReplicationControllerDemo from "../pages/note/ReplicationControllerDemo.jsx";
+import PodStatus from "../pages/note/PodStatus.jsx";
+import PodLifecycle from "../pages/note/PodLifecycle.jsx";
 
 const SideBar = ({isOpen, onClose}) => {
     const {pathname} = useLocation();
@@ -256,6 +258,39 @@ const SideBar = ({isOpen, onClose}) => {
                                 >
                                     ReplicationController <br/>수평 확장 데모
                                 </SidebarItem>
+                                <SidebarItem
+                                    as={Link}
+                                    to="/healthCheck"
+                                    className={pathname === "/healthCheck" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    헬스 체크
+                                </SidebarItem>
+                                <SidebarItem
+                                    as={Link}
+                                    to="/livenessReadiness"
+                                    className={pathname === "/livenessReadiness" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    Liveness와 <br/>Readiness Probe
+                                </SidebarItem>
+                                <SidebarItem
+                                    as={Link}
+                                    to="/podStatus"
+                                    className={pathname === "/podStatus" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    파드(Pod)의 상태 이해하기
+                                </SidebarItem>
+                                <SidebarItem
+                                    as={Link}
+                                    to="/podLifecycle"
+                                    className={pathname === "/podLifecycle" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    파드 수명 주기
+                                </SidebarItem>
+
                             </SidebarCollapse>
 
 
