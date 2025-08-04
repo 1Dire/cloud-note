@@ -25,6 +25,8 @@ import ReplicationControllerDemo from "../pages/note/ReplicationControllerDemo.j
 import PodStatus from "../pages/note/PodStatus.jsx";
 import PodLifecycle from "../pages/note/PodLifecycle.jsx";
 import Secret from "../pages/note/Secret.jsx";
+import WordPressDemo from "../pages/note/WordPressDemo.jsx";
+import KubernetesDashboard from "../pages/note/KubernetesDashboard.jsx";
 
 const SideBar = ({isOpen, onClose}) => {
     const {pathname} = useLocation();
@@ -300,7 +302,22 @@ const SideBar = ({isOpen, onClose}) => {
                                 >
                                     쿠버네티스 시크릿
                                 </SidebarItem>
-
+                                <SidebarItem
+                                    as={Link}
+                                    to="/wordPressDemo"
+                                    className={pathname === "/wordPressDemo" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    워드프레스 데모
+                                </SidebarItem>
+                                <SidebarItem
+                                    as={Link}
+                                    to="/kubernetesDashboard"
+                                    className={pathname === "/kubernetesDashboard" ? activeClass : ""}
+                                    onClick={onClose}
+                                >
+                                    쿠버네티스 웹 UI 대시보드
+                                </SidebarItem>
                             </SidebarCollapse>
 
 

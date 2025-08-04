@@ -57,22 +57,38 @@ const dummyLogs = [{
     {
         title: "쿠버네티스 시크릿(Secret)", tags: ["Kubernetes", "Secret", "환경 변수", "Volume", "보안", "기밀 데이터"], to: "secret",
     },
+    {
+        title: "워드프레스 + 시크릿 배포 데모",
+        tags: [
+            "Kubernetes",
+            "WordPress",
+            "Secret",
+            "Deployment",
+            "Service",
+            "NodePort",
+            "Minikube"
+        ],
+        to: "wordPressDemo",
+    },
+    {
+        title: "쿠버네티스 웹 UI 대시보드",
+        tags: [
+            "Kubernetes",
+            "Dashboard",
+            "Web UI",
+            "RBAC",
+            "ServiceAccount",
+            "minikube"
+        ],
+        to: "kubernetesDashboard",
+    },
 
 ];
 
 const Tag = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const navigate = useNavigate();
-
-    const allTags = Array.from(new Set(dummyLogs.flatMap((log) => log.tags)));
-
-    const handleTagClick = (tag) => {
-        const matchedLog = dummyLogs.find((log) => log.tags.includes(tag));
-        if (matchedLog?.to) {
-            navigate(`/${matchedLog.to}`);
-        }
-    };
-
+    Array.from(new Set(dummyLogs.flatMap((log) => log.tags)));
     const handleTitleClick = (to) => {
         if (to) navigate(`/${to}`);
     };

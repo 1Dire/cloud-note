@@ -28,6 +28,8 @@ import LivenessReadiness from "./pages/note/LivenessReadiness.jsx";
 import PodStatus from "./pages/note/PodStatus.jsx";
 import PodLifecycle from "./pages/note/PodLifecycle.jsx";
 import Secret from "./pages/note/Secret.jsx";
+import WordPressDemo from "./pages/note/WordPressDemo.jsx";
+import KubernetesDashboard from "./pages/note/KubernetesDashboard.jsx";
 
 function App() {
     return (<BrowserRouter>
@@ -62,6 +64,9 @@ function App() {
                 <Route path="/podStatus" element={<PodStatus/>}/>
                 <Route path="/podLifecycle" element={<PodLifecycle/>}/>
                 <Route path="/secret" element={<Secret/>}/>
+                <Route path="/wordPressDemo" element={<WordPressDemo/>}/>
+                <Route path="/kubernetesDashboard" element={<KubernetesDashboard/>}/>
+
             </Route>
         </Routes>
     </BrowserRouter>);
