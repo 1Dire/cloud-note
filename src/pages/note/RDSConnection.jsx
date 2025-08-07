@@ -2,7 +2,7 @@ import React from "react";
 import LightboxViewer from "../../components/LightboxViewer";
 import Tags from "../../components/Tags";
 
-// 블록 코드 컴포넌트 (다크모드 최적화)
+
 const BlockCode = ({ children }) => (
     <pre className="bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100 text-sm p-4 rounded-md overflow-x-auto font-mono my-2">
     <code>{children}</code>

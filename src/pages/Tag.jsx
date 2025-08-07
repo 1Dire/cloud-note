@@ -4,6 +4,9 @@ import {HiSearch} from "react-icons/hi";
 import {useNavigate} from "react-router-dom";
 import {FcFinePrint} from "react-icons/fc";
 import PodLifecycle from "./note/PodLifecycle.jsx";
+import ServiceDiscoveryDemo from "./note/ServiceDiscoveryDemo.jsx";
+import KubernetesConfigMap from "./note/KubernetesConfigMap.jsx";
+import KubernetesIngress from "./note/KubernetesIngress.jsx";
 
 const dummyLogs = [{
     title: "클라우드란 무엇인가?", tags: ["클라우드 컴퓨팅", "온프레미스", "IaaS", "PaaS", "SaaS"], to: "whatIsCloud",
@@ -82,6 +85,40 @@ const dummyLogs = [{
         ],
         to: "kubernetesDashboard",
     },
+    {
+        title: "Kubernetes DNS를 이용한 서비스 탐색",
+        tags: [
+            "DNS",
+            "Service Discovery",
+            "CoreDNS",
+            "kube-dns",
+            "파드 통신",
+            "도메인 네이밍",
+            "Busybox",
+            "kubectl 실습"
+        ],
+        to: "kubernetesDNSDiscovery",
+    },
+    {
+        title: "서비스 탐색 (DNS 기반) 데모",
+        tags: ["쿠버네티스", "서비스탐색", "DNS", "CoreDNS", "kubectl"],
+        to: "serviceDiscoveryDemo",
+    },
+    {
+        title: "Kubernetes ConfigMap 이해 및 활용",
+        tags: ["Kubernetes", "ConfigMap", "볼륨 마운트", "환경 변수"],
+        to: "kubernetesConfigMap",
+    },
+    {
+        title: "ConfigMap + NGINX 리버스 프록시 데모",
+        tags: ["ConfigMap", "NGINX", "Reverse Proxy", "Kubernetes"],
+        to: "configMapNginxProxy",
+    },
+    {
+        title: "인그레스와 인그레스 컨트롤러",
+        tags: ["Kubernetes", "Ingress", "Ingress Controller", "NGINX", "트래픽 라우팅"],
+        to: "kubernetesIngress",
+    },
 
 ];
 
@@ -100,50 +137,50 @@ const Tag = () => {
     });
 
     return (<div>
-            <h1 className="text-2xl font-bold mb-6 text-indigo-600 dark:text-sky-500">
-                <FcFinePrint className="inline-block mr-2 align-middle"/>
-                태그 및 키워드로 학습 기록 검색
-            </h1>
+        <h1 className="text-2xl font-bold mb-6 text-indigo-600 dark:text-sky-500">
+            <FcFinePrint className="inline-block mr-2 align-middle"/>
+            태그 및 키워드로 학습 기록 검색
+        </h1>
 
-            <div className="mb-4">
-                <TextInput
-                    icon={HiSearch}
-                    type="text"
-                    placeholder="제목 또는 태그로 검색"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    sizing="md"
-                />
-            </div>
+        <div className="mb-4">
+            <TextInput
+                icon={HiSearch}
+                type="text"
+                placeholder="제목 또는 태그로 검색"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                sizing="md"
+            />
+        </div>
 
 
-            <ul className="space-y-4">
-                {filteredLogs.length > 0 ? (filteredLogs.map((log, i) => (<li
-                            key={i}
-                            className="border-b border-gray-300 dark:border-gray-700 pb-2"
-                        >
-                            <p
-                                onClick={() => handleTitleClick(log.to)}
-                                className="font-semibold text-lg cursor-pointer text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-sky-400 transition"
-                            >
-                                {log.title}
-                            </p>
-                            <div className="mt-1 flex gap-2 flex-wrap">
-                                {log.tags.map((t, j) => (<Badge
-                                        key={j}
-                                        color="indigo"
-                                        size="xs"
-                                        className="cursor-pointer text-indigo-600"
+        <ul className="space-y-4">
+            {filteredLogs.length > 0 ? (filteredLogs.map((log, i) => (<li
+                key={i}
+                className="border-b border-gray-300 dark:border-gray-700 pb-2"
+            >
+                <p
+                    onClick={() => handleTitleClick(log.to)}
+                    className="font-semibold text-lg cursor-pointer text-gray-800 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-sky-400 transition"
+                >
+                    {log.title}
+                </p>
+                <div className="mt-1 flex gap-2 flex-wrap">
+                    {log.tags.map((t, j) => (<Badge
+                        key={j}
+                        color="indigo"
+                        size="xs"
+                        className="cursor-pointer text-indigo-600"
 
-                                    >
-                                        #{t}
-                                    </Badge>))}
-                            </div>
-                        </li>))) : (<p className="text-sm text-gray-500 text-center">
-                        일치하는 기록이 없습니다.
-                    </p>)}
-            </ul>
-        </div>);
+                    >
+                        #{t}
+                    </Badge>))}
+                </div>
+            </li>))) : (<p className="text-sm text-gray-500 text-center">
+                일치하는 기록이 없습니다.
+            </p>)}
+        </ul>
+    </div>);
 };
 
 export default Tag;
