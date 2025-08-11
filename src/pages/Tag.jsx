@@ -7,6 +7,7 @@ import PodLifecycle from "./note/PodLifecycle.jsx";
 import ServiceDiscoveryDemo from "./note/ServiceDiscoveryDemo.jsx";
 import KubernetesConfigMap from "./note/KubernetesConfigMap.jsx";
 import KubernetesIngress from "./note/KubernetesIngress.jsx";
+import KubernetesVolume from "./note/KubernetesVolume.jsx";
 
 const dummyLogs = [{
     title: "클라우드란 무엇인가?", tags: ["클라우드 컴퓨팅", "온프레미스", "IaaS", "PaaS", "SaaS"], to: "whatIsCloud",
@@ -118,6 +119,26 @@ const dummyLogs = [{
         title: "인그레스와 인그레스 컨트롤러",
         tags: ["Kubernetes", "Ingress", "Ingress Controller", "NGINX", "트래픽 라우팅"],
         to: "kubernetesIngress",
+    },
+    {
+        title: "외부 DNS + 인그레스 개요",
+        tags: ["Kubernetes", "Ingress", "Ingress Controller", "ExternalDNS", "DNS", "로드밸런서"],
+        to: "externalDNSIngress",
+    },
+    {
+        title: "쿠버네티스 볼륨 & 퍼시스턴트 볼륨 요약",
+        tags: ["쿠버네티스", "볼륨", "퍼시스턴트 볼륨", "AWS EBS", "Stateful 앱"],
+        to: "kubernetesVolume",
+    },
+    {
+        title: "볼륨 프로비저닝과 워드프레스 데모",
+        tags: ["Kubernetes", "Volume Provisioning", "StorageClass", "EBS", "EFS", "WordPress"],
+        to: "volumeProvisioning",
+    },
+    {
+        title: "PodPreset란? (파드 자동 설정 주입)",
+        tags:["Kubernetes", "PodPreset", "자동 주입", "ConfigMap", "Secret", "Best Practice"],
+        to: "podPreset",
     },
 
 ];

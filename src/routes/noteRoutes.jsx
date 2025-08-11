@@ -1,3 +1,7 @@
+import KubernetesVolume from "../pages/note/KubernetesVolume.jsx";
+import VolumeProvisioning from "../pages/note/VolumeProvisioning.jsx";
+import PodPreset from "../pages/note/PodPreset.jsx";
+
 export const noteRoutes = [
     { path: "/whatIsCloud", label: "클라우드란 무엇인가?" },
     { path: "/createEC2", label: "EC2 인스턴스 생성" },
@@ -26,6 +30,9 @@ export const noteRoutes = [
     { path: "/kubernetesConfigMap", label: <>Kubernetes ConfigMap<br/>이해 및 활용</>},
     { path: "/configMapNginxProxy", label: <>ConfigMap + NGINX <br/>리버스 프록시 데모</>},
     { path: "/kubernetesIngress", label: <>인그레스와 인그레스<br/>컨트롤러</>},
-
+    { path: "/externalDNSIngress", label: <>외부 DNS + 인그레스 개요</>},
+    { path: "/kubernetesVolume", label: <>쿠버네티스 볼륨 <br/>& 퍼시스턴트 볼륨 요약</>},
+    { path: "/volumeProvisioning", label: <>볼륨 프로비저닝과 <br/> 워드프레스 데모</>},
+    { path: "/podPreset", label: <>PodPreset란?<br/>(파드 자동 설정 주입)</>},
 
 ];
