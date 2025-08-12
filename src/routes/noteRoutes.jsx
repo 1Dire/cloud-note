@@ -1,6 +1,3 @@
-import KubernetesVolume from "../pages/note/KubernetesVolume.jsx";
-import VolumeProvisioning from "../pages/note/VolumeProvisioning.jsx";
-import PodPreset from "../pages/note/PodPreset.jsx";
 
 export const noteRoutes = [
     { path: "/whatIsCloud", label: "클라우드란 무엇인가?" },
@@ -34,5 +31,7 @@ export const noteRoutes = [
     { path: "/kubernetesVolume", label: <>쿠버네티스 볼륨 <br/>& 퍼시스턴트 볼륨 요약</>},
     { path: "/volumeProvisioning", label: <>볼륨 프로비저닝과 <br/> 워드프레스 데모</>},
     { path: "/podPreset", label: <>PodPreset란?<br/>(파드 자동 설정 주입)</>},
+    { path: "/statefulSetCassandra", label: <>StatefulSet로 Cassandra <br/>클러스터 배포 데모)</>},
+    { path: "/hpa", label: <>오토스케일링</>},
 
 ];

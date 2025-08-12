@@ -137,8 +137,17 @@ const dummyLogs = [{
     },
     {
         title: "PodPreset란? (파드 자동 설정 주입)",
-        tags:["Kubernetes", "PodPreset", "자동 주입", "ConfigMap", "Secret", "Best Practice"],
+        tags: ["Kubernetes", "PodPreset", "자동 주입", "ConfigMap", "Secret", "Best Practice"],
         to: "podPreset",
+    },
+    {
+        title: "StatefulSet로 Cassandra 클러스터 배포 데모",
+        tags: ["Kubernetes", "StatefulSet", "Cassandra", "Headless Service", "PVC", "Stateful App"],
+        to: "statefulSetCassandra",
+    }, {
+        title: "오토스케일링",
+        tags: ["Kubernetes", "HPA", "Autoscaling", "Metrics Server", "Minikube"],
+        to: "hpa",
     },
 
 ];
