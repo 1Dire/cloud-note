@@ -1,3 +1,4 @@
+import PodAffinityAntiAffinity from "../pages/note/PodAffinityAntiAffinity.jsx";
 
 export const noteRoutes = [
     { path: "/whatIsCloud", label: "클라우드란 무엇인가?" },
@@ -33,5 +34,8 @@ export const noteRoutes = [
     { path: "/podPreset", label: <>PodPreset란?<br/>(파드 자동 설정 주입)</>},
     { path: "/statefulSetCassandra", label: <>StatefulSet로 Cassandra <br/>클러스터 배포 데모)</>},
     { path: "/hpa", label: <>오토스케일링</>},
+    { path: "/affinityAntiAffinity", label: <>어피니티 & 안티 어피니티</>},
+    { path: "/podAffinityAntiAffinity", label: <>파드 간 어피니티 & <br/>안티어피니티</>},
+
 
 ];

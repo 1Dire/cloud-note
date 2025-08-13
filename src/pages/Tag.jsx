@@ -148,6 +148,30 @@ const dummyLogs = [{
         title: "오토스케일링",
         tags: ["Kubernetes", "HPA", "Autoscaling", "Metrics Server", "Minikube"],
         to: "hpa",
+    },{
+        title: "어피니티 & 안티 어피니티토스케일링",
+        tags: [
+            "Kubernetes",
+            "Affinity",
+            "AntiAffinity",
+            "NodeAffinity",
+            "PodAffinity",
+            "Scheduling",
+        ],
+        to: "affinityAntiAffinity",
+    },
+
+    {
+        title: "파드 간 어피니티 & 안티어피니티",
+        tags: [
+            "Kubernetes",
+            "Pod Affinity",
+            "Pod Anti-Affinity",
+            "Scheduling",
+            "Topology",
+            "High Availability",
+        ],
+        to: "podAffinityAntiAffinity",
     },
 
 ];
