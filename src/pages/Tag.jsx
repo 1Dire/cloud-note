@@ -8,6 +8,7 @@ import ServiceDiscoveryDemo from "./note/ServiceDiscoveryDemo.jsx";
 import KubernetesConfigMap from "./note/KubernetesConfigMap.jsx";
 import KubernetesIngress from "./note/KubernetesIngress.jsx";
 import KubernetesVolume from "./note/KubernetesVolume.jsx";
+import TaintsAndTolerations from "./note/TaintsAndTolerations.jsx";
 
 const dummyLogs = [{
     title: "클라우드란 무엇인가?", tags: ["클라우드 컴퓨팅", "온프레미스", "IaaS", "PaaS", "SaaS"], to: "whatIsCloud",
@@ -172,6 +173,11 @@ const dummyLogs = [{
             "High Availability",
         ],
         to: "podAffinityAntiAffinity",
+    },
+    {
+        title: "테인트(Taint) & 톨러레이션(Toleration)",
+        tags: ["Kubernetes", "Taint", "Toleration", "스케줄링", "노드관리"],
+        to: "taintsAndTolerations",
     },
 
 ];

@@ -1,4 +1,5 @@
 import PodAffinityAntiAffinity from "../pages/note/PodAffinityAntiAffinity.jsx";
+import TaintsAndTolerations from "../pages/note/TaintsAndTolerations.jsx";
 
 export const noteRoutes = [
     { path: "/whatIsCloud", label: "클라우드란 무엇인가?" },
@@ -36,6 +37,7 @@ export const noteRoutes = [
     { path: "/hpa", label: <>오토스케일링</>},
     { path: "/affinityAntiAffinity", label: <>어피니티 & 안티 어피니티</>},
     { path: "/podAffinityAntiAffinity", label: <>파드 간 어피니티 & <br/>안티어피니티</>},
+    { path: "/taintsAndTolerations", label: <>테인트(Taint) & 톨러레이션<br/>(Toleration)</>},
 
 
 ];
