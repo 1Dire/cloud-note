@@ -9,7 +9,7 @@ const BlockCode = ({ children }) => (
   </pre>
 );
 
-const RDSConnection = () => {
+const RdsConnection = () => {
     const tags = ["RDS", "MySQL", "EC2 연동"];
 
     return (
@@ -54,4 +54,4 @@ const RDSConnection = () => {
     );
 };
 
-export default RDSConnection;
+export default RdsConnection;
