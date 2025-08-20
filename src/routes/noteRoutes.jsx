@@ -1,5 +1,3 @@
-import PodAffinityAntiAffinity from "../pages/note/PodAffinityAntiAffinity.jsx";
-import TaintsAndTolerations from "../pages/note/TaintsAndTolerations.jsx";
 
 export const noteRoutes = [
     { path: "/whatIsCloud", label: "클라우드란 무엇인가?" },

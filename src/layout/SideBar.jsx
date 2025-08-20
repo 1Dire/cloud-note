@@ -19,9 +19,9 @@ import {
 import {IoMdPricetag} from "react-icons/io";
 import {Link, useLocation} from "react-router-dom";
 import {LuNotebookPen} from "react-icons/lu";
-import {FaPenClip} from "react-icons/fa6";
+import {FaPenClip,FaBook} from "react-icons/fa6";
 import {noteRoutes} from "../routes/noteRoutes.jsx";
-
+import {blogRoutes} from "../routes/blogRoutes.jsx";
 const SideBar = ({isOpen, onClose}) => {
     const {pathname} = useLocation();
 
@@ -131,6 +131,24 @@ const SideBar = ({isOpen, onClose}) => {
                         <SidebarItemGroup>
                             <SidebarCollapse icon={FaPenClip} label="Note">
                                 {noteRoutes.map(({path, label}) => (
+                                    <SidebarItem
+                                        key={path}
+                                        as={Link}
+                                        to={path}
+                                        className={pathname === path ? activeClass : ""}
+                                        onClick={onClose}
+                                    >
+                                        {label}
+                                    </SidebarItem>
+                                ))}
+                            </SidebarCollapse>
+
+
+                        </SidebarItemGroup>
+
+                        <SidebarItemGroup>
+                            <SidebarCollapse icon={FaBook} label="Blog">
+                                {blogRoutes.map(({path, label}) => (
                                     <SidebarItem
                                         key={path}
                                         as={Link}

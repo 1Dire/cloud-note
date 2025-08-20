@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from "@tailwindcss/vite";
 import flowbiteReact from "flowbite-react/plugin/vite";
 import path from "path"; // ✅ 경로 매핑을 위한 path 모듈 추가
 
@@ -11,5 +11,9 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "src"), // ✅ '@'를 'src' 디렉토리에 매핑
     },
+  },
+  server: {
+    port: 3000,
+    host: true, // ✅ 외부 접속 허용 (내 IP로 접속 가능하게 하려면 이거 필수)
   },
 });

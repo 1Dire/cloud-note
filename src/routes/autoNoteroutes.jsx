@@ -1,16 +1,18 @@
 import React from "react";
 
-// 동적으로 note 폴더의 컴포넌트들을 불러옴
-const notePages = import.meta.glob("../pages/note/*.jsx", { eager: true });
+// note와 blog 폴더의 컴포넌트 불러오기
+const notePages = import.meta.glob("@/pages/note/*.jsx", { eager: true });
+const blogPages = import.meta.glob("@/pages/blog/*.jsx", { eager: true });
 
-const autoNoteRoutes = Object.entries(notePages).map(([path, module]) => {
-    const name = path
-        .split("/")
-        .pop()
-        .replace(".jsx", ""); // ex: Secret.jsx -> Secret
+// note + blog 합쳐서 한 번에 처리
+const allPages = { ...notePages, ...blogPages };
+
+// 공통 라우트 생성
+const autoNoteRoutes = Object.entries(allPages).map(([path, module]) => {
+    const name = path.split("/").pop().replace(".jsx", ""); // ex: WhatIsCloud.jsx
 
     return {
-        path: name.charAt(0).toLowerCase() + name.slice(1), // 소문자 시작 경로
+        path: name.charAt(0).toLowerCase() + name.slice(1), // ex: whatIsCloud
         element: React.createElement(module.default),
     };
 });
