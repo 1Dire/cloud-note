@@ -1,6 +1,0 @@
-{
-  "buildCommand": "vite build",
-  "outputDirectory": "dist",
-  "ignoreCommand": "echo 'no ignore'",
-  "cleanUrls": true
-}
