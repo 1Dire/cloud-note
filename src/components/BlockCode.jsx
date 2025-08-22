@@ -1,10 +1,16 @@
-import React from 'react';
+// src/components/BlockCode.jsx
+import React from "react";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
-const BlockCode = ({children}) => {
-    return (<pre
-        className="bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100 text-sm p-4 rounded-md overflow-x-auto font-mono my-2">
-    <code>{children}</code>
-  </pre>);
-}
+const BlockCode = ({ code, children, language }) => {
+    return (
+        <div className="not-prose my-4 rounded-lg overflow-hidden shadow-md">
+            <SyntaxHighlighter language={language} style={oneDark} wrapLongLines={true}>
+                {code || children}
+            </SyntaxHighlighter>
+        </div>
+    );
+};
 
 export default BlockCode;

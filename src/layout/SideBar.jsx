@@ -1,3 +1,4 @@
+// src/components/SideBar.jsx
 import React from "react";
 import {
     Sidebar,
@@ -6,25 +7,15 @@ import {
     SidebarItems,
     SidebarCollapse,
 } from "flowbite-react";
-import {
-    HiArrowSmRight,
-    HiChartPie,
-    HiInbox,
-    HiShoppingBag,
-    HiTable,
-    HiUser,
-    HiViewBoards,
-} from "react-icons/hi";
-
 import {IoMdPricetag} from "react-icons/io";
-import {Link, useLocation} from "react-router-dom";
 import {LuNotebookPen} from "react-icons/lu";
-import {FaPenClip,FaBook} from "react-icons/fa6";
+import {FaPenClip, FaBook} from "react-icons/fa6";
+import {Link, useLocation} from "react-router-dom";
 import {noteRoutes} from "../routes/noteRoutes.jsx";
 import {blogRoutes} from "../routes/blogRoutes.jsx";
+
 const SideBar = ({isOpen, onClose}) => {
     const {pathname} = useLocation();
-
     const activeClass = "!text-white !bg-indigo-600 dark:!bg-sky-600";
 
     return (
@@ -47,8 +38,7 @@ const SideBar = ({isOpen, onClose}) => {
             >
                 <Sidebar aria-label="Sidebar Navigation" className="h-full">
                     {/* 로고 */}
-                    <div
-                        className="px-4 py-6 flex items-center justify-center mb-6 gap-2 border-b border-gray-200 dark:border-gray-600">
+                    <div className="px-4 py-6 flex items-center justify-center mb-6 gap-2 border-b border-gray-200 dark:border-gray-600">
                         <img src="/logo.png" alt="App Logo" className="w-15 h-15"/>
                         <span className="text-indigo-500 font-bold text-xl">Dire</span>
                         <span className="text-sky-500 font-bold text-xl">Note</span>
@@ -60,7 +50,7 @@ const SideBar = ({isOpen, onClose}) => {
                                 as={Link}
                                 to="/"
                                 icon={() => <IoMdPricetag className={pathname === "/" ? "text-white" : ""}/>}
-                                className={pathname === "/" ? activeClass : ""}
+                                className={`custom-sidebar-item ${pathname === "/" ? activeClass : ""}`}
                                 onClick={onClose}
                             >
                                 Tag
@@ -69,62 +59,17 @@ const SideBar = ({isOpen, onClose}) => {
 
                         <SidebarItemGroup>
                             <SidebarCollapse icon={LuNotebookPen} label="Plan">
-                                <SidebarItem
-                                    as={Link}
-                                    to="/day1"
-                                    className={pathname === "/day1" ? activeClass : ""}
-                                    onClick={onClose}
-                                >
-                                    Day 1
-                                </SidebarItem>
-                                <SidebarItem
-                                    as={Link}
-                                    to="/day2"
-                                    className={pathname === "/day2" ? activeClass : ""}
-                                    onClick={onClose}
-                                >
-                                    Day 2
-                                </SidebarItem>
-                                <SidebarItem
-                                    as={Link}
-                                    to="/day3"
-                                    className={pathname === "/day3" ? activeClass : ""}
-                                    onClick={onClose}
-                                >
-                                    Day 3
-                                </SidebarItem>
-                                <SidebarItem
-                                    as={Link}
-                                    to="/day4"
-                                    className={pathname === "/day4" ? activeClass : ""}
-                                    onClick={onClose}
-                                >
-                                    Day 4
-                                </SidebarItem>
-                                <SidebarItem
-                                    as={Link}
-                                    to="/day5"
-                                    className={pathname === "/day5" ? activeClass : ""}
-                                    onClick={onClose}
-                                >
-                                    Day 5
-                                </SidebarItem>
-                                <SidebarItem
-                                    as={Link}
-                                    to="/day6"
-                                    className={pathname === "/day6" ? activeClass : ""}
-                                    onClick={onClose}
-                                >
-                                    Day 6
-                                </SidebarItem>
-                                <SidebarItem
-                                    as={Link}
-                                    to="/day7"
-                                    className={pathname === "/day7" ? activeClass : ""}
-                                    onClick={onClose}
-                                >
-                                    Day 7
-                                </SidebarItem>
+                                {["day1", "day2", "day3", "day4", "day5", "day6", "day7"].map(day => (
+                                    <SidebarItem
+                                        key={day}
+                                        as={Link}
+                                        to={`/${day}`}
+                                        className={`custom-sidebar-item ${pathname === `/${day}` ? activeClass : ""}`}
+                                        onClick={onClose}
+                                    >
+                                        {`Day ${day.replace("day", "")}`}
+                                    </SidebarItem>
+                                ))}
                             </SidebarCollapse>
                         </SidebarItemGroup>
 
@@ -135,15 +80,13 @@ const SideBar = ({isOpen, onClose}) => {
                                         key={path}
                                         as={Link}
                                         to={path}
-                                        className={pathname === path ? activeClass : ""}
+                                        className={`custom-sidebar-item ${pathname === path ? activeClass : ""}`}
                                         onClick={onClose}
                                     >
                                         {label}
                                     </SidebarItem>
                                 ))}
                             </SidebarCollapse>
-
-
                         </SidebarItemGroup>
 
                         <SidebarItemGroup>
@@ -153,15 +96,13 @@ const SideBar = ({isOpen, onClose}) => {
                                         key={path}
                                         as={Link}
                                         to={path}
-                                        className={pathname === path ? activeClass : ""}
+                                        className={`custom-sidebar-item ${pathname === path ? activeClass : ""}`}
                                         onClick={onClose}
                                     >
                                         {label}
                                     </SidebarItem>
                                 ))}
                             </SidebarCollapse>
-
-
                         </SidebarItemGroup>
                     </SidebarItems>
                 </Sidebar>

@@ -1,8 +1,8 @@
 import React from "react";
-
 import BlockCode from "../../components/BlockCode.jsx";
 import Tags from "../../components/Tags.jsx";
-import { FcLink } from "react-icons/fc"; // 상단에 import 추가
+import { FcLink } from "react-icons/fc";
+
 const WhatIsMinikube = () => {
     const tags = ["Minikube", "로컬 쿠버네티스", "Kubernetes", "클러스터", "개발환경"];
 
@@ -48,14 +48,15 @@ const WhatIsMinikube = () => {
 
             <div>
                 <h2 className="text-2xl font-semibold">설치 및 시작 예시</h2>
-                <BlockCode>
-                    {`# Minikube 설치
+                <BlockCode
+                    language="bash"
+                    code={`# Minikube 설치
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 # 클러스터 시작
 minikube start`}
-                </BlockCode>
+                />
             </div>
 
             <div>

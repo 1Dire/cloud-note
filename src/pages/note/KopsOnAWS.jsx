@@ -74,13 +74,13 @@ const KopsOnAWS = () => {
                 <h3 className="text-lg font-semibold mt-3">VM 환경 구성 예시</h3>
                 <ol className="list-decimal list-inside space-y-2">
                     <li>디렉토리 생성
-                        <BlockCode>{`mkdir ubuntu && cd ubuntu`}</BlockCode>
+                        <BlockCode language="bash" code={`mkdir ubuntu && cd ubuntu`} />
                     </li>
                     <li>Vagrant 박스 초기화
-                        <BlockCode>{`vagrant init ubuntu/xenial64`}</BlockCode>
+                        <BlockCode language="bash" code={`vagrant init ubuntu/xenial64`} />
                     </li>
                     <li>VM 부팅
-                        <BlockCode>{`vagrant up`}</BlockCode>
+                        <BlockCode language="bash" code={`vagrant up`} />
                     </li>
                 </ol>
 
@@ -103,7 +103,6 @@ const KopsOnAWS = () => {
                     <li>S3 버킷 및 DNS 설정</li>
                     <li>클러스터 생성 명령 실행</li>
                 </ul>
-
             </div>
         </section>
     );

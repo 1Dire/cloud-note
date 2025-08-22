@@ -33,17 +33,19 @@ export default function KubernetesDashboard() {
 
             <div>
                 <h2 className="text-2xl font-semibold">🚀 설치 방법</h2>
-                <BlockCode>
-                    {`kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml`}
-                </BlockCode>
+                <BlockCode
+                    language="bash"
+                    code={`kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml`}
+                />
                 <p>위 명령어로 대시보드를 설치할 수 있습니다. 이후 <strong>RBAC 권한 사용자</strong>도 설정해야 합니다.</p>
             </div>
 
             <div>
                 <h2 className="text-2xl font-semibold">🔐 admin-user 서비스 계정 생성</h2>
                 <p>모든 리소스를 관리할 수 있는 <strong>admin-user</strong>를 생성합니다:</p>
-                <BlockCode>
-                    {`# dashboard-adminuser.yaml
+                <BlockCode
+                    language="yaml"
+                    code={`# dashboard-adminuser.yaml
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -62,28 +64,29 @@ subjects:
 - kind: ServiceAccount
   name: admin-user
   namespace: kube-system`}
-                </BlockCode>
+                />
                 <p>적용:</p>
-                <BlockCode>kubectl apply -f dashboard/dashboard-adminuser.yaml</BlockCode>
+                <BlockCode language="bash" code={`kubectl apply -f dashboard/dashboard-adminuser.yaml`} />
             </div>
 
             <div>
                 <h2 className="text-2xl font-semibold">🔑 토큰 얻기</h2>
-                <BlockCode>
-                    {`kubectl -n kube-system get secret | grep admin-user
+                <BlockCode
+                    language="bash"
+                    code={`kubectl -n kube-system get secret | grep admin-user
 kubectl -n kube-system describe secret [admin-user-token-xxxx]`}
-                </BlockCode>
+                />
                 <p>
-                    `describe` 명령어로 나오는 <strong>token 값을 복사</strong>해서 로그인할 때 붙여넣습니다.
+                    <code>describe</code> 명령어로 나오는 <strong>token 값을 복사</strong>해서 로그인할 때 붙여넣습니다.
                 </p>
             </div>
 
             <div>
                 <h2 className="text-2xl font-semibold">🌐 대시보드 접속</h2>
                 <p>Minikube 사용자는 간단히 다음으로 실행합니다:</p>
-                <BlockCode>minikube dashboard</BlockCode>
+                <BlockCode language="bash" code={`minikube dashboard`} />
                 <p>또는 URL만 확인:</p>
-                <BlockCode>minikube dashboard --url</BlockCode>
+                <BlockCode language="bash" code={`minikube dashboard --url`} />
                 <p>
                     브라우저에 표시된 URL에서 <strong>Token 로그인</strong>을 선택한 후, 위에서 복사한 토큰을 붙여넣어 로그인합니다.
                 </p>

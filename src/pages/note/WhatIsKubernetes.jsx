@@ -38,17 +38,13 @@ const WhatIsKubernetes = () => {
             <div>
                 <h2 className="text-2xl font-semibold">반복 작업의 예시</h2>
                 <p>예를 들어 20개의 컨테이너를 실행해야 한다면, Docker만 사용할 경우 다음과 같은 작업을 반복해야 한다.</p>
-                <BlockCode>
-                    {`# Docker만 사용하는 경우
+                <BlockCode language="bash" code={`# Docker만 사용하는 경우
 docker run myapp
 docker run myapp
 docker run myapp
-# (20번 반복)`}
-                </BlockCode>
+# (20번 반복)`} />
                 <p className="mt-3">하지만 쿠버네티스를 사용하면 매니페스트 파일 하나만 작성하면 된다.</p>
-                <BlockCode>
-                    {`# 쿠버네티스 매니페스트 예시
-apiVersion: apps/v1
+                <BlockCode language="yaml" code={`apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myapp-deployment
@@ -64,8 +60,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: myapp:latest`}
-                </BlockCode>
+        image: myapp:latest`} />
             </div>
 
             <div>
@@ -143,13 +138,12 @@ spec:
                     <li>모든 쿠버네티스 제어는 <InlineCode>kubectl</InlineCode>로 진행된다.</li>
                 </ul>
 
-                <BlockCode>
-                    {`# kubectl 사용 예시
+                <BlockCode language="bash" code={`# kubectl 사용 예시
 kubectl get nodes        # 노드 상태 조회
 kubectl get pods         # 파드 상태 조회
-kubectl apply -f app.yaml # 매니페스트 적용`}
-                </BlockCode>
+kubectl apply -f app.yaml # 매니페스트 적용`} />
             </div>
+
             <div>
                 <h2 className="text-2xl font-semibold">마스터 노드의 컨트롤 플레인 구성</h2>
                 <p>쿠버네티스의 마스터 노드에는 다음과 같은 핵심 컴포넌트가 설치된다:</p>

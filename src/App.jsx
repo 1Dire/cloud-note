@@ -1,7 +1,6 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import AutoRoutes from "./AutoRoutes";
-
-
 
 function App() {
     return (

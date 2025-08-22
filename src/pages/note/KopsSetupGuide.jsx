@@ -39,10 +39,12 @@ const KopsSetupGuide = () => {
                         GitHub - Kops 릴리스
                     </a>
                 </p>
-                <BlockCode>{`
-curl -LO https://github.com/kubernetes/kops/releases/latest/download/kops-linux-amd64
+                <BlockCode
+                    language="bash"
+                    code={`curl -LO https://github.com/kubernetes/kops/releases/latest/download/kops-linux-amd64
 chmod +x kops-linux-amd64
-sudo mv kops-linux-amd64 /usr/local/bin/kops`}</BlockCode>
+sudo mv kops-linux-amd64 /usr/local/bin/kops`}
+                />
             </div>
 
             <div className="space-y-4">
@@ -50,10 +52,12 @@ sudo mv kops-linux-amd64 /usr/local/bin/kops`}</BlockCode>
                 <p>
                     kubectl은 Kubernetes 클러스터를 관리하기 위한 CLI 도구이며, Kops와 함께 설치가 필요하다.
                 </p>
-                <BlockCode>{`
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+                <BlockCode
+                    language="bash"
+                    code={`curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 chmod +x kubectl
-sudo mv kubectl /usr/local/bin/kubectl`}</BlockCode>
+sudo mv kubectl /usr/local/bin/kubectl`}
+                />
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                     설치 후 <code>kubectl version</code>으로 정상 작동 여부를 확인할 수 있다.
                 </p>
@@ -64,7 +68,7 @@ sudo mv kubectl /usr/local/bin/kubectl`}</BlockCode>
                 <p>
                     Kops는 SSH를 통해 노드에 접속하므로, 공개 키를 미리 생성해 두어야 한다.
                 </p>
-                <BlockCode>{`ssh-keygen -t rsa -b 4096`}</BlockCode>
+                <BlockCode language="bash" code={`ssh-keygen -t rsa -b 4096`} />
                 <p>
                     기본 생성 위치는 <code>~/.ssh/id_rsa.pub</code>이며, 해당 키가 노드에 설치된다.
                 </p>
@@ -72,40 +76,43 @@ sudo mv kubectl /usr/local/bin/kubectl`}</BlockCode>
 
             <div className="space-y-4">
                 <h2 className="text-xl font-semibold">🧱 클러스터 생성 명령</h2>
-                <BlockCode>{`
-kops create cluster \\
+                <BlockCode
+                    language="bash"
+                    code={`kops create cluster \\
   --name=kubernetes.newtech.academy \\
   --state=s3://my-kops-state-bucket \\
   --zones=us-east-1a \\
   --node-count=2 \\
   --node-size=t2.micro \\
   --master-size=t2.micro \\
-  --dns-zone=kubernetes.newtech.academy`}</BlockCode>
-                <p>
-                    위 명령으로 Kops 클러스터 구성을 정의하고, 다음 명령으로 실제 인프라를 생성한다.
-                </p>
-                <BlockCode>{`kops update cluster kubernetes.newtech.academy --state=s3://my-kops-state-bucket --yes`}</BlockCode>
+  --dns-zone=kubernetes.newtech.academy`}
+                />
+                <p>위 명령으로 Kops 클러스터 구성을 정의하고, 다음 명령으로 실제 인프라를 생성한다.</p>
+                <BlockCode
+                    language="bash"
+                    code={`kops update cluster kubernetes.newtech.academy --state=s3://my-kops-state-bucket --yes`}
+                />
             </div>
 
             <div className="space-y-4">
                 <h2 className="text-xl font-semibold">🔍 클러스터 확인 및 테스트</h2>
-                <BlockCode>{`kubectl get nodes`}</BlockCode>
-                <p>
-                    노드 목록 확인이 가능하며, 아래 예시처럼 간단한 애플리케이션을 배포할 수 있다.
-                </p>
-                <BlockCode>{`
-kubectl run hello-minikube --image=kicbase/echo-server:1.0 --port=8080
+                <BlockCode language="bash" code={`kubectl get nodes`} />
+                <p>노드 목록 확인이 가능하며, 아래 예시처럼 간단한 애플리케이션을 배포할 수 있다.</p>
+                <BlockCode
+                    language="bash"
+                    code={`kubectl run hello-minikube --image=kicbase/echo-server:1.0 --port=8080
 kubectl expose deployment hello-minikube --type=NodePort
-kubectl get service`}</BlockCode>
-                <p>
-                    노출된 NodePort를 통해 EC2 퍼블릭 IP로 접근하면 응답을 확인할 수 있다.
-                </p>
+kubectl get service`}
+                />
+                <p>노출된 NodePort를 통해 EC2 퍼블릭 IP로 접근하면 응답을 확인할 수 있다.</p>
             </div>
 
             <div className="space-y-4">
                 <h2 className="text-xl font-semibold">🧯 클러스터 삭제</h2>
-                <BlockCode>{`
-kops delete cluster --name=kubernetes.newtech.academy --state=s3://my-kops-state-bucket --yes`}</BlockCode>
+                <BlockCode
+                    language="bash"
+                    code={`kops delete cluster --name=kubernetes.newtech.academy --state=s3://my-kops-state-bucket --yes`}
+                />
                 <p>
                     삭제 시 <code>--yes</code> 옵션을 반드시 포함해야 한다.
                 </p>
@@ -122,7 +129,7 @@ kops delete cluster --name=kubernetes.newtech.academy --state=s3://my-kops-state
                     <li>DNS 전파에는 최대 1시간 소요 가능</li>
                 </ul>
                 <p>DNS 확인 명령 예시:</p>
-                <BlockCode>{`host -t NS kubernetes.newtech.academy`}</BlockCode>
+                <BlockCode language="bash" code={`host -t NS kubernetes.newtech.academy`} />
             </div>
         </section>
     );

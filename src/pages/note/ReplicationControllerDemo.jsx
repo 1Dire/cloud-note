@@ -24,28 +24,28 @@ export default function ReplicationControllerDemo() {
             <div>
                 <h2 className="text-2xl font-semibold">클러스터 확인 및 설정</h2>
                 <p>Minikube 쿠버네티스 클러스터를 재시작한 후, 아래 명령어로 클러스터 준비 상태를 확인합니다:</p>
-                <BlockCode>kubectl get nodes</BlockCode>
+                <BlockCode language="bash" code={`kubectl get nodes`} />
                 <p>사용할 YAML 파일 경로:</p>
-                <BlockCode>Kubernetes-course/Replication-Controller/helloworld-repl-controller.yml</BlockCode>
+                <BlockCode language="bash" code={`Kubernetes-course/Replication-Controller/helloworld-repl-controller.yml`} />
                 <p>복제 컨트롤러를 생성한 후 파드 상태를 확인합니다:</p>
-                <BlockCode>kubectl get pods</BlockCode>
+                <BlockCode language="bash" code={`kubectl get pods`} />
             </div>
 
             <div>
                 <h2 className="text-2xl font-semibold">파드 확인 및 설명</h2>
                 <p>생성된 파드는 각각 고유한 이름을 가지며, 예시는 다음과 같습니다:</p>
-                <BlockCode>kubectl describe pod helloworld-controller-[randomstring]</BlockCode>
+                <BlockCode language="bash" code={`kubectl describe pod helloworld-controller-[randomstring]`} />
                 <p>이미지를 다운로드한 후 두 개의 파드가 실행되며, 스테이트리스 앱의 수평 확장을 확인할 수 있습니다.</p>
             </div>
 
             <div>
                 <h2 className="text-2xl font-semibold">수평 확장 (Scaling)</h2>
                 <p>다음 명령어로 파드 수를 4개로 늘릴 수 있습니다:</p>
-                <BlockCode>kubectl scale --replicas=4 -f helloworld-repl-controller.yml</BlockCode>
+                <BlockCode language="bash" code={`kubectl scale --replicas=4 -f helloworld-repl-controller.yml`} />
                 <p>또는 복제 컨트롤러 이름으로 직접 스케일할 수도 있습니다:</p>
-                <BlockCode>kubectl scale --replicas=1 rc/helloworld-controller</BlockCode>
+                <BlockCode language="bash" code={`kubectl scale --replicas=1 rc/helloworld-controller`} />
                 <p>결과 확인:</p>
-                <BlockCode>kubectl get pods</BlockCode>
+                <BlockCode language="bash" code={`kubectl get pods`} />
                 <p>이렇게 수평 확장은 스케일 아웃(늘리기)과 스케일 인(줄이기)을 모두 수행할 수 있습니다.</p>
             </div>
 
@@ -66,7 +66,7 @@ export default function ReplicationControllerDemo() {
             <div>
                 <h2 className="text-2xl font-semibold">삭제 및 마무리</h2>
                 <p>복제 컨트롤러를 삭제하려면 아래 명령어를 사용합니다:</p>
-                <BlockCode>kubectl delete rc/helloworld-controller</BlockCode>
+                <BlockCode language="bash" code={`kubectl delete rc/helloworld-controller`} />
                 <p>
                     삭제 후에도 마지막 파드는 바로 종료되지 않을 수 있습니다. 관련 설정 정보는 etcd에 저장되며,
                     YAML 파일 없이도 동작하지만, 보통은 YAML로 관리하는 것이 버전 관리와 재사용에 유리합니다.

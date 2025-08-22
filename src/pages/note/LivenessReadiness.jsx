@@ -24,7 +24,7 @@ export default function LivenessReadiness() {
             <div>
                 <h2 className="text-2xl font-semibold">readinessProbe란?</h2>
                 <p>
-                    <strong>readinessProbe</strong>는 파드가 **트래픽을 받을 준비가 되었는지**를 판단하는 헬스 체크입니다. 이 검사에 실패하면 해당 파드는 서비스에서 제거되어 트래픽을 받지 않습니다. 성공하면 다시 서비스에 포함되어 트래픽을 받을 수 있습니다.
+                    <strong>readinessProbe</strong>는 파드가 <strong>트래픽을 받을 준비가 되었는지</strong>를 판단하는 헬스 체크입니다. 이 검사에 실패하면 해당 파드는 서비스에서 제거되어 트래픽을 받지 않습니다. 성공하면 다시 서비스에 포함되어 트래픽을 받을 수 있습니다.
                 </p>
                 <ul className="list-disc list-inside mt-3 space-y-1">
                     <li>앱이 초기 부팅 중일 때 요청을 막을 수 있음</li>
@@ -36,7 +36,9 @@ export default function LivenessReadiness() {
             <div>
                 <h2 className="text-2xl font-semibold">실습: readinessProbe와 livenessProbe 비교</h2>
                 <p>아래 YAML은 readiness와 liveness 프로브를 함께 사용하는 예시입니다:</p>
-                <BlockCode>{`livenessProbe:
+                <BlockCode
+                    language="yaml"
+                    code={`livenessProbe:
   httpGet:
     path: /
     port: nodejs-port
@@ -51,27 +53,30 @@ readinessProbe:
   timeoutSeconds: 30
   periodSeconds: 10
   successThreshold: 1
-  failureThreshold: 3`}</BlockCode>
+  failureThreshold: 3`}
+                />
             </div>
 
             <div>
                 <h2 className="text-2xl font-semibold">동작 비교</h2>
                 <p>
-                    <strong>livenessProbe</strong>는 컨테이너가 죽었는지를 판단하여 실패 시 컨테이너를 **재시작**합니다. 반면 <strong>readinessProbe</strong>는 파드가 요청 받을 준비가 되었는지를 판단하며, 실패 시 **서비스에서 제외**됩니다.
+                    <strong>livenessProbe</strong>는 컨테이너가 죽었는지를 판단하여 실패 시 컨테이너를 <strong>재시작</strong>합니다.
+                    반면 <strong>readinessProbe</strong>는 파드가 요청 받을 준비가 되었는지를 판단하며, 실패 시 <strong>서비스에서 제외</strong>됩니다.
                 </p>
                 <p>
-                    예를 들어 앱이 HTTP 500 에러를 반환하면 readinessProbe는 파드를 서비스에서 제거하지만, livenessProbe는 컨테이너 자체를 재시작할 수 있습니다.
+                    예를 들어 앱이 HTTP 500 에러를 반환하면 readinessProbe는 파드를 서비스에서 제거하지만,
+                    livenessProbe는 컨테이너 자체를 재시작할 수 있습니다.
                 </p>
             </div>
 
             <div>
                 <h2 className="text-2xl font-semibold">명령어 예시</h2>
                 <p>헬스 체크 포함 배포 생성:</p>
-                <BlockCode>kubectl create -f helloworld-liveness-readiness.yml</BlockCode>
+                <BlockCode language="bash" code={`kubectl create -f helloworld-liveness-readiness.yml`} />
                 <p>상태 확인 및 실시간 모니터링:</p>
-                <BlockCode>watch -n1 kubectl get pods</BlockCode>
+                <BlockCode language="bash" code={`watch -n1 kubectl get pods`} />
                 <p>파드 상세 보기:</p>
-                <BlockCode>kubectl describe pods</BlockCode>
+                <BlockCode language="bash" code={`kubectl describe pods`} />
             </div>
 
             <div>

@@ -37,7 +37,9 @@ export default function Healthcheck() {
             <div>
                 <h2 className="text-2xl font-semibold">헬스 체크가 포함된 배포 YAML</h2>
                 <p>아래 YAML은 livenessProbe가 추가된 Deployment입니다:</p>
-                <BlockCode>{`apiVersion: apps/v1
+                <BlockCode
+                    language="yaml"
+                    code={`apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: helloworld-deployment
@@ -65,14 +67,15 @@ spec:
           timeoutSeconds: 30
           periodSeconds: 10
           successThreshold: 1
-          failureThreshold: 3`}</BlockCode>
+          failureThreshold: 3`}
+                />
             </div>
 
             <div>
                 <h2 className="text-2xl font-semibold">배포 및 확인 명령어</h2>
-                <BlockCode>kubectl create -f helloworld-healthcheck.yml</BlockCode>
-                <BlockCode>kubectl get pods</BlockCode>
-                <BlockCode>kubectl describe pods</BlockCode>
+                <BlockCode language="bash" code={`kubectl create -f helloworld-healthcheck.yml`} />
+                <BlockCode language="bash" code={`kubectl get pods`} />
+                <BlockCode language="bash" code={`kubectl describe pods`} />
                 <p>
                     <code>livenessProbe</code> 섹션에서 설정값 및 성공/실패 횟수 등을 확인할 수 있습니다.
                 </p>

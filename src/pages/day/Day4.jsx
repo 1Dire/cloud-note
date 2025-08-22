@@ -1,10 +1,7 @@
 import React from "react";
 import BlockCode from "../../components/BlockCode.jsx";
 
-
 const Day4 = () => {
-
-
     return (
         <section className="space-y-10 text-gray-800 dark:text-gray-200">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500">
@@ -36,17 +33,15 @@ const Day4 = () => {
                     <ol className="list-decimal list-inside space-y-4">
                         <li>
                             <strong>Docker 설치</strong>
-                            <BlockCode>
-                                {`sudo apt update
+                            <BlockCode language="bash" code={`sudo apt update
 sudo apt install docker.io -y
 sudo systemctl start docker
-sudo systemctl enable docker`}
-                            </BlockCode>
+sudo systemctl enable docker`} />
                         </li>
 
                         <li>
                             <strong>Nginx 컨테이너 실행</strong>
-                            <BlockCode>sudo docker run -d -p 80:80 nginx</BlockCode>
+                            <BlockCode language="bash" code={`sudo docker run -d -p 80:80 nginx`} />
                             <p>
                                 퍼블릭 IP로 접속 시 Nginx 기본 페이지가 보여야 합니다.
                             </p>
@@ -54,18 +49,14 @@ sudo systemctl enable docker`}
 
                         <li>
                             <strong>커스텀 Dockerfile 작성</strong>
-                            <BlockCode>
-                                {`FROM nginx
-COPY index.html /usr/share/nginx/html/index.html`}
-                            </BlockCode>
+                            <BlockCode language="dockerfile" code={`FROM nginx
+COPY index.html /usr/share/nginx/html/index.html`} />
                         </li>
 
                         <li>
                             <strong>이미지 빌드 및 컨테이너 실행</strong>
-                            <BlockCode>
-                                {`docker build -t mysite .
-docker run -d -p 8080:80 mysite`}
-                            </BlockCode>
+                            <BlockCode language="bash" code={`docker build -t mysite .
+docker run -d -p 8080:80 mysite`} />
                         </li>
 
                         <li>

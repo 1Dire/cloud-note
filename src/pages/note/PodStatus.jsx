@@ -23,16 +23,18 @@ export default function PodStatus() {
 
             <div>
                 <h2 className="text-2xl font-semibold">1. 파드 상태 필드 (kubectl get pods)</h2>
-                <p><strong>파드 상태(Status)</strong>는 전체 파드의 요약 상태를 나타냅니다. 주로 다음 5가지입니다:</p>
+                <p>
+                    <strong>파드 상태(Status)</strong>는 전체 파드의 요약 상태를 나타냅니다. 주로 다음 5가지입니다:
+                </p>
                 <ul className="list-disc list-inside mt-3 space-y-1">
                     <li><strong>Running:</strong> 모든 컨테이너가 생성되고 하나 이상이 실행 중인 상태</li>
-                    <li><strong>Pending:</strong> 파드가 예약되었지만 실행 준비 중 (ex: 이미지 다운로드 중)</li>
+                    <li><strong>Pending:</strong> 파드가 예약되었지만 실행 준비 중 (예: 이미지 다운로드 중)</li>
                     <li><strong>Succeeded:</strong> 모든 컨테이너가 정상 종료</li>
                     <li><strong>Failed:</strong> 모든 컨테이너가 종료되었고 하나 이상이 실패 코드 반환</li>
                     <li><strong>Unknown:</strong> 상태를 확인할 수 없음 (예: 노드 다운)</li>
                 </ul>
                 <p>자세한 이유는 다음 명령어로 확인할 수 있습니다:</p>
-                <BlockCode>kubectl describe pod [POD_NAME]</BlockCode>
+                <BlockCode language="bash" code={`kubectl describe pod [POD_NAME]`} />
             </div>
 
             <div>
@@ -45,7 +47,7 @@ export default function PodStatus() {
                     <li><strong>Unschedulable:</strong> 자원 부족 등으로 예약할 수 없음</li>
                     <li><strong>ContainersReady:</strong> 모든 컨테이너가 준비되었는가?</li>
                 </ul>
-                <BlockCode>kubectl describe pod [POD_NAME]</BlockCode>
+                <BlockCode language="bash" code={`kubectl describe pod [POD_NAME]`} />
             </div>
 
             <div>
@@ -57,7 +59,7 @@ export default function PodStatus() {
                     <li><strong>Waiting:</strong> 이미지 다운로드, 의존성 대기 등</li>
                 </ul>
                 <p>상세 정보는 다음 명령으로 확인할 수 있습니다:</p>
-                <BlockCode>kubectl get pod [POD_NAME] -o yaml</BlockCode>
+                <BlockCode language="bash" code={`kubectl get pod [POD_NAME] -o yaml`} />
             </div>
 
             <div>

@@ -50,10 +50,8 @@ const PodAndService = () => {
                     <li>구성이 다른 Pod는 다른 Service로 관리한다.</li>
                 </ul>
 
-                <BlockCode>
-                    {`# Service의 동작 개념
-클라이언트 요청 --> Service IP --> 여러 Pod에 분배`}
-                </BlockCode>
+                <BlockCode language="text" code={`# Service의 동작 개념
+클라이언트 요청 --> Service IP --> 여러 Pod에 분배`} />
 
                 <p className="mt-3">
                     예를 들어, 워드프레스 서비스가 있다면

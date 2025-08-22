@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaGithub} from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const frontendRepo = "https://github.com/1Dire/HansanPension-Front";
 const backendRepo = "https://github.com/1Dire/HansanPension-Backend";
@@ -60,14 +60,13 @@ const Post1 = () => {
                 하나씩 글로 남기려고 한다.
             </p>
 
-            <hr className="my-8"/>
+            <hr className="my-8" />
             <div>
                 <h2 className="text-xl font-bold text-gray-800 dark:text-white">✅ 배포 대상</h2>
 
                 <div className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6 mb-12">
                     {/* 프론트엔드 카드 */}
-                    <div
-                        className="border rounded-2xl p-6 shadow-md bg-gradient-to-br from-white to-slate-50 dark:from-gray-800 dark:to-gray-900 dark:border-gray-700 transition">
+                    <div className="border rounded-2xl p-6 shadow-md bg-gradient-to-br from-white to-slate-50 dark:from-gray-800 dark:to-gray-900 dark:border-gray-700 transition">
                         <h3 className="text-lg font-semibold mb-2 text-slate-800 dark:text-white">프론트엔드</h3>
                         <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">React (Vite 기반)</p>
                         <a
@@ -76,13 +75,12 @@ const Post1 = () => {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 transition text-sm"
                         >
-                            <FaGithub/> GitHub 저장소
+                            <FaGithub /> GitHub 저장소
                         </a>
                     </div>
 
                     {/* 백엔드 카드 */}
-                    <div
-                        className="border rounded-2xl p-6 shadow-md bg-gradient-to-br from-white to-slate-50 dark:from-gray-800 dark:to-gray-900 dark:border-gray-700 transition">
+                    <div className="border rounded-2xl p-6 shadow-md bg-gradient-to-br from-white to-slate-50 dark:from-gray-800 dark:to-gray-900 dark:border-gray-700 transition">
                         <h3 className="text-lg font-semibold mb-2 text-slate-800 dark:text-white">백엔드</h3>
                         <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">Spring Boot (REST API)</p>
                         <a
@@ -91,11 +89,12 @@ const Post1 = () => {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 transition text-sm"
                         >
-                            <FaGithub/> GitHub 저장소
+                            <FaGithub /> GitHub 저장소
                         </a>
                     </div>
                 </div>
             </div>
+
             <div>
                 <h2 className="text-xl font-bold text-gray-800 dark:text-white">🧱 아키텍처 설계</h2>
 
@@ -116,6 +115,7 @@ const Post1 = () => {
                         <li><strong>CI/CD:</strong> GitHub Actions를 통한 자동 배포</li>
                     </ul>
                 </div>
+
                 <div>
                     <h2 className="text-xl font-bold text-gray-800 dark:text-white">🚀 배포 순서</h2>
 

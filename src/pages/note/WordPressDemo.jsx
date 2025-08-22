@@ -26,25 +26,22 @@ export default function WordPressDemo() {
             <div>
                 <h2 className="text-2xl font-semibold">🔐 시크릿 생성</h2>
                 <p>DB 비밀번호를 저장할 시크릿을 생성합니다:</p>
-                <BlockCode>
-                    {`# wordpress-secret.yml
+                <BlockCode language="yaml" code={`# wordpress-secret.yml
 apiVersion: v1
 kind: Secret
 metadata:
   name: wordpress-secrets
 type: Opaque
 data:
-  db-password: cGFzc3dvcmQ=  # base64 인코딩된 "password"`}
-                </BlockCode>
+  db-password: cGFzc3dvcmQ=  # base64 인코딩된 "password"`} />
                 <p>적용:</p>
-                <BlockCode>kubectl create -f wordpress/wordpress-secret.yml</BlockCode>
+                <BlockCode language="bash" code={`kubectl create -f wordpress/wordpress-secret.yml`} />
             </div>
 
             <div>
                 <h2 className="text-2xl font-semibold">📦 배포 구성</h2>
                 <p>하나의 파드에 워드프레스와 MySQL을 함께 실행합니다.</p>
-                <BlockCode>
-                    {`# single-deployment-no-volumes.yml
+                <BlockCode language="yaml" code={`# single-deployment-no-volumes.yml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -81,17 +78,15 @@ spec:
           valueFrom:
             secretKeyRef:
               name: wordpress-secrets
-              key: db-password`}
-                </BlockCode>
+              key: db-password`} />
                 <p>적용:</p>
-                <BlockCode>kubectl create -f wordpress/single-deployment-no-volumes.yml</BlockCode>
+                <BlockCode language="bash" code={`kubectl create -f wordpress/single-deployment-no-volumes.yml`} />
             </div>
 
             <div>
                 <h2 className="text-2xl font-semibold">🌐 서비스 생성</h2>
                 <p>외부 접근을 위해 NodePort로 워드프레스를 노출합니다:</p>
-                <BlockCode>
-                    {`# wordpress-service.yml
+                <BlockCode language="yaml" code={`# wordpress-service.yml
 apiVersion: v1
 kind: Service
 metadata:
@@ -104,13 +99,10 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 80
-    nodePort: 30080`}
-                </BlockCode>
+    nodePort: 30080`} />
                 <p>적용 및 브라우저 접속:</p>
-                <BlockCode>
-                    {`kubectl create -f wordpress/wordpress-service.yml
-minikube service wordpress-service --url`}
-                </BlockCode>
+                <BlockCode language="bash" code={`kubectl create -f wordpress/wordpress-service.yml
+minikube service wordpress-service --url`} />
             </div>
 
             <div>
@@ -119,7 +111,7 @@ minikube service wordpress-service --url`}
                     현재는 <strong>볼륨 미사용 상태</strong>이기 때문에, 워드프레스에 저장된 데이터는 <strong>파드 재시작 시 모두 사라집니다.</strong>
                 </p>
                 <p>재시작 예시:</p>
-                <BlockCode>kubectl delete pod [wordpress-pod-name]</BlockCode>
+                <BlockCode language="bash" code={`kubectl delete pod [wordpress-pod-name]`} />
                 <p>⇒ 새 파드 생성됨 + 워드프레스 설치화면 초기화됨</p>
                 <p className="text-yellow-500">
                     이 문제는 이후 <strong>PersistentVolume </strong>로 해결예정.

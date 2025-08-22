@@ -38,41 +38,35 @@ export default function Secret() {
             <div>
                 <h2 className="text-2xl font-semibold">1️⃣ 파일로 Secret 생성</h2>
                 <p>텍스트 파일을 기반으로 시크릿을 생성합니다:</p>
-                <BlockCode>
-                    {`echo "root" > username.txt
+                <BlockCode language="bash" code={`echo "root" > username.txt
 echo "my-password" > password.txt
 
 kubectl create secret generic db-user-pass \\
   --from-file=username.txt \\
-  --from-file=password.txt`}
-                </BlockCode>
+  --from-file=password.txt`} />
                 <p>→ 시크릿 이름은 <code>db-user-pass</code>, 키는 파일 이름(username, password)입니다.</p>
             </div>
 
             <div>
                 <h2 className="text-2xl font-semibold">2️⃣ YAML로 Secret 생성</h2>
                 <p>값은 <strong>base64로 인코딩</strong>해야 합니다:</p>
-                <BlockCode>
-                    {`apiVersion: v1
+                <BlockCode language="yaml" code={`apiVersion: v1
 kind: Secret
 metadata:
   name: db-secret
 type: Opaque
 data:
   username: cm9vdA==     # "root"
-  password: bXktcGFzc3dvcmQ=   # "my-password"`}
-                </BlockCode>
+  password: bXktcGFzc3dvcmQ=   # "my-password"`} />
                 <p>
-                    base64 인코딩 방법 (리눅스/macOS):
-                    <br />
+                    base64 인코딩 방법 (리눅스/macOS):<br />
                     <code>echo -n "root" | base64</code>
                 </p>
             </div>
 
             <div>
                 <h2 className="text-2xl font-semibold">3️⃣ 환경 변수로 Secret 사용</h2>
-                <BlockCode>
-                    {`env:
+                <BlockCode language="yaml" code={`env:
 - name: DB_USER
   valueFrom:
     secretKeyRef:
@@ -83,15 +77,13 @@ data:
   valueFrom:
     secretKeyRef:
       name: db-secret
-      key: password`}
-                </BlockCode>
+      key: password`} />
                 <p>→ 앱에서 <code>process.env.DB_USER</code> 와 같은 방식으로 읽을 수 있습니다.</p>
             </div>
 
             <div>
                 <h2 className="text-2xl font-semibold">4️⃣ 파일로 마운트해서 사용</h2>
-                <BlockCode>
-                    {`volumeMounts:
+                <BlockCode language="yaml" code={`volumeMounts:
 - name: creds
   mountPath: "/etc/creds"
   readOnly: true
@@ -99,15 +91,13 @@ data:
 volumes:
 - name: creds
   secret:
-    secretName: db-secret`}
-                </BlockCode>
+    secretName: db-secret`} />
                 <p>→ 컨테이너 내부에 <code>/etc/creds/username</code>, <code>/etc/creds/password</code> 파일이 생깁니다.</p>
             </div>
 
             <div>
                 <h2 className="text-2xl font-semibold">5️⃣ 실습 명령 요약</h2>
-                <BlockCode>
-                    {`# 파일 기반 시크릿 생성
+                <BlockCode language="bash" code={`# 파일 기반 시크릿 생성
 kubectl create secret generic db-user-pass --from-file=username.txt --from-file=password.txt
 
 # 시크릿 보기
@@ -118,8 +108,7 @@ kubectl describe secret db-user-pass
 kubectl get secret db-user-pass -o yaml
 
 # base64 디코딩 (내용 확인용)
-echo "bXktcGFzc3dvcmQ=" | base64 --decode`}
-                </BlockCode>
+echo "bXktcGFzc3dvcmQ=" | base64 --decode`} />
             </div>
 
             <div>

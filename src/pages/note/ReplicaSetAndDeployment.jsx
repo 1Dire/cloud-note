@@ -13,7 +13,7 @@ const ReplicaSetAndDeployment = () => {
             </h1>
 
             <div className="flex flex-wrap gap-2 mb-6">
-                <Tags tags={tags}/>
+                <Tags tags={tags} />
             </div>
 
             <div>
@@ -33,8 +33,9 @@ const ReplicaSetAndDeployment = () => {
                     그래서 파드의 수를 조절한다는 말은 <strong>레플리카의 수를 조절한다</strong>는 말과 같다.
                 </p>
 
-                <BlockCode>
-                    {`# 예시: 파드 3개 유지
+                <BlockCode
+                    language="yaml"
+                    code={`# 예시: 파드 3개 유지
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
@@ -52,7 +53,7 @@ spec:
       containers:
       - name: myapp
         image: myapp:latest`}
-                </BlockCode>
+                />
             </div>
 
             <div>
@@ -72,8 +73,9 @@ spec:
                     쉽게 말해 <strong>ReplicaSet이 반장이라면, Deployment는 반장의 상사</strong>다.
                 </p>
 
-                <BlockCode>
-                    {`# Deployment 예시
+                <BlockCode
+                    language="yaml"
+                    code={`# Deployment 예시
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -91,7 +93,7 @@ spec:
       containers:
       - name: myapp
         image: myapp:latest`}
-                </BlockCode>
+                />
             </div>
 
             <div>

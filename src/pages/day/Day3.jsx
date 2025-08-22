@@ -2,9 +2,9 @@ import React from "react";
 import BlockCode from "../../components/BlockCode.jsx";
 import InlineCode from "../../components/InlineCode.jsx";
 
-
 const Day3 = () => {
-    return (<section className="space-y-10 text-gray-800 dark:text-gray-200 leading-relaxed">
+    return (
+        <section className="space-y-10 text-gray-800 dark:text-gray-200 leading-relaxed">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500">
                 Day 3 – EC2 + RDS 연동 실습
             </h1>
@@ -49,21 +49,22 @@ const Day3 = () => {
                 <ol className="list-decimal list-inside space-y-2">
                     <li>
                         mysql-client 설치
-                        <BlockCode>sudo apt install mysql-client -y</BlockCode>
+                        <BlockCode language="bash" code={`sudo apt install mysql-client -y`} />
                     </li>
                     <li>
                         접속 명령
-                        <BlockCode>mysql -h [엔드포인트] -u [사용자] -p</BlockCode>
+                        <BlockCode language="bash" code={`mysql -h [엔드포인트] -u [사용자] -p`} />
                     </li>
                     <li>
                         테스트 쿼리 실행
-                        <BlockCode>
-                            {`CREATE DATABASE testdb;
+                        <BlockCode
+                            language="sql"
+                            code={`CREATE DATABASE testdb;
 USE testdb;
 CREATE TABLE users (id INT PRIMARY KEY, name VARCHAR(50));
 INSERT INTO users VALUES (1, 'Alice');
 SELECT * FROM users;`}
-                        </BlockCode>
+                        />
                     </li>
                 </ol>
             </div>
@@ -86,7 +87,8 @@ SELECT * FROM users;`}
                     </li>
                 </ul>
             </div>
-        </section>);
+        </section>
+    );
 };
 
 export default Day3;
