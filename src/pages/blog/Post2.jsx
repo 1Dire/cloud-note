@@ -5,7 +5,7 @@ import LightboxViewer from "@/components/LightboxViewer.jsx";
 const Post2 = () => {
     return (
         <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
-            <h2 className="text-2xl font-bold text-gray-800 dark:text-white">🐳 Docker 설정</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-white">Docker 설정</h2>
 
             <p>
                 이번엔 프론트엔드랑 백엔드를 도커로 묶어보기로 했다. 아무래도 AWS에 배포하려면 컨테이너로

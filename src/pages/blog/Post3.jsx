@@ -5,7 +5,7 @@ import BlockCode from "@/components/BlockCode";
 const Post3 = () => {
     return (
         <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
-            <h2 className="text-2xl font-bold text-gray-800 dark:text-white">🔐 AWS IAM 사용자 생성</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-white">AWS IAM 사용자 생성</h2>
 
             <p>
                 드디어 AWS에 올릴 준비를 시작했다. ECR이나 ECS를 쓰려면 당연히 IAM 사용자부터 있어야 하니까,
@@ -79,10 +79,7 @@ AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`} />
                 이 키를 가지고 나중에 AWS CLI에서 로그인하거나 GitHub Actions 같은 CI 도구에 넣을 수 있다.
             </p>
 
-            <hr className="my-6" />
-            <p className="text-sm text-gray-500">
-                IAM 설정은 여기까지! 다음은 ECR에 Docker 이미지 푸시하는 작업으로 넘어간다 🚀
-            </p>
+
         </div>
     );
 };

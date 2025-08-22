@@ -5,7 +5,7 @@ import BlockCode from "@/components/BlockCode";
 const Post4 = () => {
     return (
         <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
-            <h2 className="text-2xl font-bold text-gray-800 dark:text-white">🐳 AWS ECR에 Docker 이미지 푸시</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-white">AWS ECR에 Docker 이미지 푸시</h2>
 
             <p>
                 드디어 내가 만든 백엔드 앱과 프론트엔드 앱을 AWS에 배포하기 위한 첫 단계, <strong>ECR</strong>에 이미지를 올려보기로 했다.
@@ -94,10 +94,7 @@ docker login --username AWS \
                 </ul>
             </div>
 
-            <hr className="my-6" />
-            <p className="text-sm text-gray-500">
-                여기까지 완료하면 이제 ECS에서 이 이미지를 가져다 쓸 수 있다. 다음은 ECS 클러스터 만들기! 🚀
-            </p>
+
         </div>
     );
 };
