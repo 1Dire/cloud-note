@@ -6,4 +6,7 @@ export const blogRoutes = [
     {path: "/post5", label: "AWS RDS + PostgreSQL 마이그레이션"},
     {path: "/post6", label: "AWS ECR에 Spring Boot 백엔드 Docker 이미지 푸시"},
     {path: "/post7", label: "AWS ECS + Spring Boot 배포 튜토리얼"},
+    {path: "/post8", label: "AWS ALB"},
+    {path: "/post9", label: "프론트엔드 ECS 배포"},
+    {path: "/post10", label: "배포 후기"},
 ];
