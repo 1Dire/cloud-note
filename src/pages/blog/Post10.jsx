@@ -49,17 +49,11 @@ export default function Post10() {
             <p>
                 프론트 + 백엔드 ECS Fargate 각각 약 10달러, ALB 약 15~20달러, 로그 & 전송비용 약간 포함해서 총 25~40달러 정도 예상된다.
                 작은 규모의 프로젝트라면 충분히 감당 가능한 수준.
+
+                하지만 지금 개발중이니 비용절감을위해 삭제해두자!
             </p>
 
-            <h2 className="text-xl font-semibold text-indigo-600 dark:text-sky-400 mt-10">📸 실제 배포 결과</h2>
-            <a
-                href="http://hansanpension-1408501111.ap-northeast-2.elb.amazonaws.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 dark:text-sky-500 underline decoration-wavy decoration-blue-500"
-            >
-                링크
-            </a>
+
 
             <h2 className="text-xl font-semibold text-indigo-600 dark:text-sky-400 mt-10">📎 마무리</h2>
             <p>
