@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 
 // 자동 라우팅할 폴더 리스트
-const baseFolders = ["day", "blog", "note"];
+const baseFolders = ["day", "blog", "note","cloud"];
 
 function getRoutes(dirPath, baseFolder) {
     const files = fs.readdirSync(dirPath).filter(file => file.endsWith(".jsx"));

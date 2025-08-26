@@ -12,8 +12,12 @@ import {LuNotebookPen} from "react-icons/lu";
 import {FaPenClip, FaBook} from "react-icons/fa6";
 import {Link, useLocation} from "react-router-dom";
 import {noteRoutes} from "../routes/noteRoutes.jsx";
+import {FaHashtag} from "react-icons/fa6";
 import {blogRoutes} from "../routes/blogRoutes.jsx";
-
+import {IoIosCloudOutline} from "react-icons/io";
+import {AiOutlineKubernetes} from "react-icons/ai";
+import { GoBook } from "react-icons/go";
+import {cloudeRoutes} from "../routes/cloudeRoutes.jsx";
 const SideBar = ({isOpen, onClose}) => {
     const {pathname} = useLocation();
     const activeClass = "!text-white !bg-indigo-600 dark:!bg-sky-600";
@@ -38,7 +42,8 @@ const SideBar = ({isOpen, onClose}) => {
             >
                 <Sidebar aria-label="Sidebar Navigation" className="h-full">
                     {/* 로고 */}
-                    <div className="px-4 py-6 flex items-center justify-center mb-6 gap-2 border-b border-gray-200 dark:border-gray-600">
+                    <div
+                        className="px-4 py-6 flex items-center justify-center mb-6 gap-2 border-b border-gray-200 dark:border-gray-600">
                         <img src="/logo.png" alt="App Logo" className="w-15 h-15"/>
                         <span className="text-indigo-500 font-bold text-xl">Dire</span>
                         <span className="text-sky-500 font-bold text-xl">Note</span>
@@ -49,7 +54,7 @@ const SideBar = ({isOpen, onClose}) => {
                             <SidebarItem
                                 as={Link}
                                 to="/"
-                                icon={() => <IoMdPricetag className={pathname === "/" ? "text-white" : ""}/>}
+                                icon={() => <FaHashtag className={pathname === "/" ? "text-white" : ""}/>}
                                 className={`custom-sidebar-item ${pathname === "/" ? activeClass : ""}`}
                                 onClick={onClose}
                             >
@@ -74,7 +79,23 @@ const SideBar = ({isOpen, onClose}) => {
                         </SidebarItemGroup>
 
                         <SidebarItemGroup>
-                            <SidebarCollapse icon={FaPenClip} label="Note">
+                            <SidebarCollapse icon={IoIosCloudOutline} label="Cloud">
+                                {cloudeRoutes.map(({path, label}) => (
+                                    <SidebarItem
+                                        key={path}
+                                        as={Link}
+                                        to={path}
+                                        className={`custom-sidebar-item ${pathname === path ? activeClass : ""}`}
+                                        onClick={onClose}
+                                    >
+                                        {label}
+                                    </SidebarItem>
+                                ))}
+                            </SidebarCollapse>
+                        </SidebarItemGroup>
+
+                        <SidebarItemGroup>
+                            <SidebarCollapse icon={AiOutlineKubernetes} label="Kubernetes">
                                 {noteRoutes.map(({path, label}) => (
                                     <SidebarItem
                                         key={path}
@@ -90,7 +111,7 @@ const SideBar = ({isOpen, onClose}) => {
                         </SidebarItemGroup>
 
                         <SidebarItemGroup>
-                            <SidebarCollapse icon={FaBook} label="Blog">
+                            <SidebarCollapse icon={GoBook} label="ESC 배포">
                                 {blogRoutes.map(({path, label}) => (
                                     <SidebarItem
                                         key={path}

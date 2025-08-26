@@ -1,7 +1,7 @@
 import React from "react";
-import LightboxViewer from "../../components/LightboxViewer";
-import Tags from "../../components/Tags";
-import BlockCode from "../../components/BlockCode"; // 새 컴포넌트 구조 사용
+import LightboxViewer from "../../components/LightboxViewer.jsx";
+import Tags from "../../components/Tags.jsx";
+import BlockCode from "../../components/BlockCode.jsx"; // 새 컴포넌트 구조 사용
 
 const RdsConnection = () => {
     const tags = ["RDS", "PostgreSQL", "EC2 연동"];
