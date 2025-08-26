@@ -13,7 +13,8 @@ import {AiOutlineKubernetes} from "react-icons/ai";
 import {GoBook} from "react-icons/go";
 import {cloudeRoutes} from "../routes/cloudeRoutes.jsx";
 import {planRoutes} from "../routes/planRoutes.jsx";
-
+import {gitActionRoutes} from "../routes/gitActionRoutes.jsx";
+import { FaGithub } from "react-icons/fa";
 const SideBar = ({isOpen, onClose}) => {
     const {pathname} = useLocation();
     const activeClass = "!text-white !bg-indigo-600 dark:!bg-sky-600";
@@ -108,6 +109,19 @@ const SideBar = ({isOpen, onClose}) => {
                                     >
                                         {label}
                                     </SidebarItem>))}
+                            </SidebarCollapse>
+                        </SidebarItemGroup>
+                        <SidebarItemGroup>
+                            <SidebarCollapse icon={FaGithub} label="gitAction">
+                                {gitActionRoutes.map(({path, label}) => (<SidebarItem
+                                    key={path}
+                                    as={Link}
+                                    to={path}
+                                    className={`custom-sidebar-item ${pathname === path ? activeClass : ""}`}
+                                    onClick={onClose}
+                                >
+                                    {label}
+                                </SidebarItem>))}
                             </SidebarCollapse>
                         </SidebarItemGroup>
                     </SidebarItems>
