@@ -39,7 +39,7 @@ CMD ["serve", "-s", "dist", "-l", "80"]`} />
             <p>
                 먼저 <code>hansan-front</code>라는 이름으로 ECR 리포지토리를 생성했다.
             </p>
-            <LightboxViewer src="blogs/post9/1.png" alt="ECR 프론트 리포지토리" className="rounded-md shadow-md my-4" />
+           <LightboxViewer src="../ecs/post9/1.png" alt="ECR 프론트 리포지토리" className="rounded-md shadow-md my-4" />
 
             <p>그 다음 아래 명령어로 이미지 빌드 및 푸시:</p>
             <BlockCode language="bash" code={`# ECR 로그인
@@ -67,7 +67,7 @@ docker push 183695703260.dkr.ecr.ap-northeast-2.amazonaws.com/hansan-front`} />
                 <li>포트 매핑: 컨테이너 포트 <code>5173</code></li>
                 <li>대상 그룹: 새로 생성 또는 기존에 연결</li>
             </ul>
-            <LightboxViewer src="blogs/post9/2.png" alt="ECS 프론트 서비스 생성" className="rounded-md shadow-md my-4" />
+           <LightboxViewer src="../ecs/post9/2.png" alt="ECS 프론트 서비스 생성" className="rounded-md shadow-md my-4" />
 
             <h2 className="text-xl font-semibold text-indigo-600 dark:text-sky-400 mt-10">4. ALB 주소 확인 및 연동</h2>
             <p>

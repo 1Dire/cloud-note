@@ -1,4 +1,6 @@
-export const blogRoutes = [
+const foldName = "ecs";
+
+export const ecsRoutes = [
     {path: "/post1", label: "펜션예약 사이트 배포"},
     {path: "/post2", label: "Docker 설정"},
     {path: "/post3", label: "IAM 사용자 만들기"},
@@ -9,4 +11,7 @@ export const blogRoutes = [
     {path: "/post8", label: "AWS ALB"},
     {path: "/post9", label: "프론트엔드 ECS 배포"},
     {path: "/post10", label: "배포 후기"},
-];
+].map(route => ({
+    ...route,
+    path: `/${foldName}${route.path}`,
+}));

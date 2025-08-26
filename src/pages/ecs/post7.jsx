@@ -34,16 +34,16 @@ const Post7 = () => {
             <p>
                 AWS 콘솔에서 ECS로 이동한 다음, <strong>“클러스터 생성”</strong> 버튼을 클릭한다.
             </p>
-            <LightboxViewer src="blogs/post7/1.png" alt="ECS에서 클러스터 생성 버튼" className="rounded-md shadow-md my-4"/>
-            <LightboxViewer src="blogs/post7/2.png" alt="Fargate 네트워킹 전용 클러스터 선택"
+           <LightboxViewer src="../ecs/post7/1.png" alt="ECS에서 클러스터 생성 버튼" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post7/2.png" alt="Fargate 네트워킹 전용 클러스터 선택"
                             className="rounded-md shadow-md my-4"/>
             <p>
                 클러스터 이름은 역할에 따라 명확하게 지정하는 것을 추천한다.
                 예: <code>hansan-backend-cluster</code>, <code>hansan-frontend-cluster</code>
             </p>
-            <LightboxViewer src="blogs/post7/3.png" alt="클러스터 이름 지정" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post7/3.png" alt="클러스터 이름 지정" className="rounded-md shadow-md my-4"/>
             <p>나머지 설정은 기본값으로 두고 생성하면 완료된다.</p>
-            <LightboxViewer src="blogs/post7/4.png" alt="클러스터 생성 완료" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post7/4.png" alt="클러스터 생성 완료" className="rounded-md shadow-md my-4"/>
 
             {/* 클러스터 설명 */}
             <div
@@ -79,32 +79,32 @@ const Post7 = () => {
                 2. 태스크 정의
             </h2>
             <p>“태스크 정의” 메뉴 클릭 후, “태스크 정의 생성”을 선택한다.</p>
-            <LightboxViewer src="blogs/post7/5.png" alt="테스크 정의 메뉴" className="rounded-md shadow-md my-4"/>
-            <LightboxViewer src="blogs/post7/6.png" alt="테스크 정의 생성" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post7/5.png" alt="테스크 정의 메뉴" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post7/6.png" alt="테스크 정의 생성" className="rounded-md shadow-md my-4"/>
             <p>패밀리 이름은 <code>hansan-backend</code>로 지정한다.</p>
-            <LightboxViewer src="blogs/post7/7.png" alt="태스크 정의 이름" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post7/7.png" alt="태스크 정의 이름" className="rounded-md shadow-md my-4"/>
             <p>
                 컨테이너 이름도 동일하게 설정하고, ECR에서 복사한 이미지 URI를 입력한다.
             </p>
-            <LightboxViewer src="blogs/post7/8.png" alt="컨테이너 이미지 입력" className="rounded-md shadow-md my-4"/>
-            <LightboxViewer src="blogs/post7/9.png" alt="ECR 이미지 복사" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post7/8.png" alt="컨테이너 이미지 입력" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post7/9.png" alt="ECR 이미지 복사" className="rounded-md shadow-md my-4"/>
 
             <p>
                 <strong>application.yml</strong>에서 사용하는 환경 변수(DB 정보, JWT_SECRET 등)를 등록한다.
             </p>
-            <LightboxViewer src="blogs/post7/10.png" alt="환경 변수 설정" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post7/10.png" alt="환경 변수 설정" className="rounded-md shadow-md my-4"/>
             <p>보안을 위해 이후에는 <code>AWS Secrets Manager</code>를 사용하는 것이 좋다.</p>
 
-            <LightboxViewer src="blogs/post7/11.png" alt="태스크 정의 생성 완료" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post7/11.png" alt="태스크 정의 생성 완료" className="rounded-md shadow-md my-4"/>
 
             {/* 3. ECS 서비스 생성 */}
             <h2 className="text-xl font-semibold text-indigo-600 dark:text-sky-400 mt-10">
                 3. ECS 서비스 생성
             </h2>
             <p>다시 클러스터 상세 화면으로 돌아와 "서비스 생성"을 클릭한다.</p>
-            <LightboxViewer src="blogs/post7/12.png" alt="클러스터 화면" className="rounded-md shadow-md my-4"/>
-            <LightboxViewer src="blogs/post7/13.png" alt="서비스 생성 입력" className="rounded-md shadow-md my-4"/>
-            <LightboxViewer src="blogs/post7/14.png" alt="서비스 유형 선택" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post7/12.png" alt="클러스터 화면" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post7/13.png" alt="서비스 생성 입력" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post7/14.png" alt="서비스 유형 선택" className="rounded-md shadow-md my-4"/>
 
             {/* 4. 네트워크 설정 */}
             <h2 className="text-xl font-semibold text-indigo-600 dark:text-sky-400 mt-10">
@@ -117,11 +117,11 @@ const Post7 = () => {
                 <li>보안 그룹은 <code>sg-xxxxx</code> 선택 – 8080, 5432 포트 인바운드 허용 필요</li>
                 <li>퍼블릭 IP는 <code>켜짐</code>으로 설정</li>
             </ul>
-            <LightboxViewer src="blogs/post7/15.png" alt="네트워크 설정 전체 화면" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post7/15.png" alt="네트워크 설정 전체 화면" className="rounded-md shadow-md my-4"/>
             <h2 className="text-xl font-semibold text-indigo-600 dark:text-sky-400 mt-10">
                 5. 배포 완료!
             </h2>
-            <LightboxViewer src="blogs/post7/16.png" alt="배포완료" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post7/16.png" alt="배포완료" className="rounded-md shadow-md my-4"/>
             {/* 5. ALB 연결 (다음 단계 예고) */}
             <h2 className="text-xl font-semibold text-indigo-600 dark:text-sky-400 mt-10">
                 🟢 다음 단계: ALB (로드 밸런서) 연결로 외부 접속 설정하기

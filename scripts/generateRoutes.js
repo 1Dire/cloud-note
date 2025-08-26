@@ -3,13 +3,13 @@ import fs from "fs";
 import path from "path";
 
 // 자동 라우팅할 폴더 리스트
-const baseFolders = ["day", "blog", "note","cloud"];
+const baseFolders = ["plan", "ecs", "kubernetes", "cloud"];
 
 function getRoutes(dirPath, baseFolder) {
     const files = fs.readdirSync(dirPath).filter(file => file.endsWith(".jsx"));
     return files.map(file => {
         const name = file.replace(".jsx", "");
-        const routePath = "/" + name.charAt(0).toLowerCase() + name.slice(1); // 앞글자만 소문자
+        const routePath = `/${baseFolder}/${name}`; // 경로에 폴더 이름 포함
         return {
             path: routePath,
             importPath: `@/pages/${baseFolder}/${file}`,

@@ -1,4 +1,4 @@
-// src/pages/note/ExternalDNSIngress.jsx
+
 import React from "react";
 import Tags from "@/components/Tags";
 import BlockCode from "@/components/BlockCode.jsx";

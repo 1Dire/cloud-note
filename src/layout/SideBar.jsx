@@ -1,34 +1,27 @@
 // src/components/SideBar.jsx
 import React from "react";
 import {
-    Sidebar,
-    SidebarItem,
-    SidebarItemGroup,
-    SidebarItems,
-    SidebarCollapse,
+    Sidebar, SidebarItem, SidebarItemGroup, SidebarItems, SidebarCollapse,
 } from "flowbite-react";
-import {IoMdPricetag} from "react-icons/io";
 import {LuNotebookPen} from "react-icons/lu";
-import {FaPenClip, FaBook} from "react-icons/fa6";
 import {Link, useLocation} from "react-router-dom";
-import {noteRoutes} from "../routes/noteRoutes.jsx";
+import {kubernetesRoutes} from "../routes/kubernetesRoutes.jsx";
 import {FaHashtag} from "react-icons/fa6";
-import {blogRoutes} from "../routes/blogRoutes.jsx";
+import {ecsRoutes} from "../routes/ecsRoutes.jsx";
 import {IoIosCloudOutline} from "react-icons/io";
 import {AiOutlineKubernetes} from "react-icons/ai";
-import { GoBook } from "react-icons/go";
+import {GoBook} from "react-icons/go";
 import {cloudeRoutes} from "../routes/cloudeRoutes.jsx";
+import {planRoutes} from "../routes/planRoutes.jsx";
+
 const SideBar = ({isOpen, onClose}) => {
     const {pathname} = useLocation();
     const activeClass = "!text-white !bg-indigo-600 dark:!bg-sky-600";
 
-    return (
-        <>
+    return (<>
             {/* 모바일 오버레이 */}
             <div
-                className={`fixed inset-0 bg-black/40 z-40 md:hidden transition-opacity ${
-                    isOpen ? "block" : "hidden"
-                }`}
+                className={`fixed inset-0 bg-black/40 z-40 md:hidden transition-opacity ${isOpen ? "block" : "hidden"}`}
                 onClick={onClose}
             />
 
@@ -64,24 +57,21 @@ const SideBar = ({isOpen, onClose}) => {
 
                         <SidebarItemGroup>
                             <SidebarCollapse icon={LuNotebookPen} label="Plan">
-                                {["day1", "day2", "day3", "day4", "day5", "day6", "day7"].map(day => (
-                                    <SidebarItem
-                                        key={day}
+                                {planRoutes.map(({path, label}) => (<SidebarItem
+                                        key={path}
                                         as={Link}
-                                        to={`/${day}`}
-                                        className={`custom-sidebar-item ${pathname === `/${day}` ? activeClass : ""}`}
+                                        to={path}
+                                        className={`custom-sidebar-item ${pathname === path ? activeClass : ""}`}
                                         onClick={onClose}
                                     >
-                                        {`Day ${day.replace("day", "")}`}
-                                    </SidebarItem>
-                                ))}
+                                        {label}
+                                    </SidebarItem>))}
                             </SidebarCollapse>
                         </SidebarItemGroup>
 
                         <SidebarItemGroup>
                             <SidebarCollapse icon={IoIosCloudOutline} label="Cloud">
-                                {cloudeRoutes.map(({path, label}) => (
-                                    <SidebarItem
+                                {cloudeRoutes.map(({path, label}) => (<SidebarItem
                                         key={path}
                                         as={Link}
                                         to={path}
@@ -89,15 +79,13 @@ const SideBar = ({isOpen, onClose}) => {
                                         onClick={onClose}
                                     >
                                         {label}
-                                    </SidebarItem>
-                                ))}
+                                    </SidebarItem>))}
                             </SidebarCollapse>
                         </SidebarItemGroup>
 
                         <SidebarItemGroup>
                             <SidebarCollapse icon={AiOutlineKubernetes} label="Kubernetes">
-                                {noteRoutes.map(({path, label}) => (
-                                    <SidebarItem
+                                {kubernetesRoutes.map(({path, label}) => (<SidebarItem
                                         key={path}
                                         as={Link}
                                         to={path}
@@ -105,15 +93,13 @@ const SideBar = ({isOpen, onClose}) => {
                                         onClick={onClose}
                                     >
                                         {label}
-                                    </SidebarItem>
-                                ))}
+                                    </SidebarItem>))}
                             </SidebarCollapse>
                         </SidebarItemGroup>
 
                         <SidebarItemGroup>
                             <SidebarCollapse icon={GoBook} label="ESC 배포">
-                                {blogRoutes.map(({path, label}) => (
-                                    <SidebarItem
+                                {ecsRoutes.map(({path, label}) => (<SidebarItem
                                         key={path}
                                         as={Link}
                                         to={path}
@@ -121,15 +107,13 @@ const SideBar = ({isOpen, onClose}) => {
                                         onClick={onClose}
                                     >
                                         {label}
-                                    </SidebarItem>
-                                ))}
+                                    </SidebarItem>))}
                             </SidebarCollapse>
                         </SidebarItemGroup>
                     </SidebarItems>
                 </Sidebar>
             </div>
-        </>
-    );
+        </>);
 };
 
 export default SideBar;

@@ -97,7 +97,7 @@ ENTRYPOINT ["java", "-jar", "app.jar"]`} />
                     이제 로컬에서 <strong>http://localhost:5173</strong> 으로 접속 가능하고,
                     같은 와이파이 쓰는 다른 기기에서도 <strong>http://192.168.xx.xx:5173</strong>으로 접속 가능하다.
                 </p>
-                <LightboxViewer src="blogs/post2/1.png" alt="인스턴스 시작 버튼" />
+                <LightboxViewer src="../ecs/post2/1.png" alt="인스턴스 시작 버튼" />
             </div>
 
 

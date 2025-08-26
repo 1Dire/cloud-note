@@ -29,7 +29,7 @@ const Post8 = () => {
 
             <h2 className="text-xl font-semibold text-indigo-600 dark:text-sky-400 mt-10">1. ALB 생성</h2>
             <p>AWS 콘솔 → EC2 → <strong>로드 밸런서</strong> → <strong>로드 밸런서 생성</strong></p>
-            <LightboxViewer src="blogs/post8/1.png" alt="로드 밸런서 생성 위치" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post8/1.png" alt="로드 밸런서 생성 위치" className="rounded-md shadow-md my-4"/>
             <p>여기서는 우리가 HTTP 기반 웹 앱을 배포하므로 <strong>Application Load Balancer(ALB)</strong>를 선택한다.</p>
 
             <div className="border-l-4 border-blue-400 bg-blue-50 dark:bg-blue-950 dark:border-blue-600 p-4 my-6">
@@ -42,7 +42,7 @@ const Post8 = () => {
                 <p className="mt-2">대부분의 웹 애플리케이션은 <strong>ALB</strong>로 충분하다.</p>
             </div>
 
-            <LightboxViewer src="blogs/post8/2.png" alt="로드 밸런서 유형" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post8/2.png" alt="로드 밸런서 유형" className="rounded-md shadow-md my-4"/>
             <p>아래와 같이 ALB를 구성:</p>
             <ul className="list-disc pl-5">
                 <li>로드 밸런서 이름: <code>hansan-backend-alb</code></li>
@@ -53,8 +53,8 @@ const Post8 = () => {
                 <li><strong>보안 그룹</strong>: 포트 80 허용된 SG</li>
             </ul>
 
-            <LightboxViewer src="blogs/post8/3.png" alt="기본구성" className="rounded-md shadow-md my-4"/>
-            <LightboxViewer src="blogs/post8/4.png" alt="보안그룹 및 라우팅" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post8/3.png" alt="기본구성" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post8/4.png" alt="보안그룹 및 라우팅" className="rounded-md shadow-md my-4"/>
 
             <h2 className="text-xl font-semibold text-indigo-600 dark:text-sky-400 mt-10">2. 대상 그룹 생성</h2>
             <p>
@@ -70,7 +70,7 @@ const Post8 = () => {
                 헬스 체크 경로는 <code>/</code>가 아닐 수 있으며, Spring Boot에서는 보통
                 <code>/actuator/health</code>를 사용한다. 잘못되면 서비스가 Unhealthy 상태로 계속 유지된다.
             </p>
-            <LightboxViewer src="blogs/post8/5.png" alt="대상 그룹 설정" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post8/5.png" alt="대상 그룹 설정" className="rounded-md shadow-md my-4"/>
 
             <h2 className="text-xl font-semibold text-indigo-600 dark:text-sky-400 mt-10">3. ECS 서비스 ALB와 연동</h2>
             <ul className="list-disc pl-5">
@@ -90,7 +90,7 @@ const Post8 = () => {
 
             <h2 className="text-xl font-semibold text-indigo-600 dark:text-sky-400 mt-10">4. 퍼블릭 도메인 확인</h2>
             <p>ALB가 생성되면 퍼블릭 DNS(URL)를 확인하자:</p>
-            <LightboxViewer src="blogs/post8/6.png" alt="ALB 주소 확인" className="rounded-md shadow-md my-4"/>
+           <LightboxViewer src="../ecs/post8/6.png" alt="ALB 주소 확인" className="rounded-md shadow-md my-4"/>
             <p>예: http://hansan-backend-alb-1234567890.ap-northeast-2.elb.amazonaws.com</p>
             <p>정상 연결되면 Spring Boot 백엔드에서 반환하는 메시지를 확인할 수 있다.</p>
 
