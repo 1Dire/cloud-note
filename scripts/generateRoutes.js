@@ -38,13 +38,15 @@ const content = `
 import { Routes, Route } from "react-router-dom";
 import Layout from "@/pages/Layout";
 import Tag from "@/pages/Tag";
+import Home from "@/pages/Home";
 ${imports}
 
 function AutoRoutes() {
     return (
         <Routes>
             <Route path="/" element={<Layout />}>
-                <Route index element={<Tag />} />
+                <Route index element={<Home />} />
+                <Route path={"tag"} element={<Tag />} />
 ${routeDefs}
                 <Route path="*" element={<div>404: Page Not Found</div>} />
             </Route>

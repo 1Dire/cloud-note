@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "@/pages/Layout";
 import Tag from "@/pages/Tag";
+import Home from "@/pages/Home";
 import Page0 from "@/pages/plan/Day1.jsx";
 import Page1 from "@/pages/plan/Day2.jsx";
 import Page2 from "@/pages/plan/Day3.jsx";
@@ -63,7 +64,8 @@ function AutoRoutes() {
     return (
         <Routes>
             <Route path="/" element={<Layout />}>
-                <Route index element={<Tag />} />
+                <Route index element={<Home />} />
+                <Route path={"tag"} element={<Tag />} />
                 <Route path="/plan/Day1" element={<Page0 />} />
                 <Route path="/plan/Day2" element={<Page1 />} />
                 <Route path="/plan/Day3" element={<Page2 />} />
