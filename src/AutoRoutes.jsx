@@ -10,26 +10,26 @@ import Page4 from "@/pages/plan/Day5.jsx";
 import Page5 from "@/pages/plan/Day6.jsx";
 import Page6 from "@/pages/plan/Day7.jsx";
 import Page7 from "@/pages/ecs/Post1.jsx";
-import Page8 from "@/pages/ecs/Post10.jsx";
-import Page9 from "@/pages/ecs/Post2.jsx";
-import Page10 from "@/pages/ecs/Post3.jsx";
-import Page11 from "@/pages/ecs/Post4.jsx";
-import Page12 from "@/pages/ecs/Post5.jsx";
-import Page13 from "@/pages/ecs/Post6.jsx";
+import Page8 from "@/pages/ecs/Post2.jsx";
+import Page9 from "@/pages/ecs/Post3.jsx";
+import Page10 from "@/pages/ecs/Post4.jsx";
+import Page11 from "@/pages/ecs/Post5.jsx";
+import Page12 from "@/pages/ecs/Post6.jsx";
+import Page13 from "@/pages/ecs/post7.jsx";
 import Page14 from "@/pages/ecs/Post8.jsx";
 import Page15 from "@/pages/ecs/Post9.jsx";
-import Page16 from "@/pages/ecs/post7.jsx";
+import Page16 from "@/pages/ecs/Post10.jsx";
 import Page17 from "@/pages/kubernetes/AffinityAntiAffinity.jsx";
 import Page18 from "@/pages/kubernetes/ConfigMapNginxProxy.jsx";
 import Page19 from "@/pages/kubernetes/ExternalDNSIngress.jsx";
-import Page20 from "@/pages/kubernetes/HPA.jsx";
-import Page21 from "@/pages/kubernetes/HealthCheck.jsx";
+import Page20 from "@/pages/kubernetes/HealthCheck.jsx";
+import Page21 from "@/pages/kubernetes/HPA.jsx";
 import Page22 from "@/pages/kubernetes/KopsOnAWS.jsx";
 import Page23 from "@/pages/kubernetes/KopsSetupGuide.jsx";
 import Page24 from "@/pages/kubernetes/KubernetesAdvancedDemo.jsx";
 import Page25 from "@/pages/kubernetes/KubernetesConfigMap.jsx";
-import Page26 from "@/pages/kubernetes/KubernetesDNSDiscovery.jsx";
-import Page27 from "@/pages/kubernetes/KubernetesDashboard.jsx";
+import Page26 from "@/pages/kubernetes/KubernetesDashboard.jsx";
+import Page27 from "@/pages/kubernetes/KubernetesDNSDiscovery.jsx";
 import Page28 from "@/pages/kubernetes/KubernetesIngress.jsx";
 import Page29 from "@/pages/kubernetes/KubernetesSummary.jsx";
 import Page30 from "@/pages/kubernetes/KubernetesVolume.jsx";
@@ -63,9 +63,11 @@ import Page56 from "@/pages/gitAction/Post4.jsx";
 function AutoRoutes() {
     return (
         <Routes>
+           
+            <Route path="/test" element={<Home />} />
             <Route path="/" element={<Layout />}>
-                <Route index element={<Home />} />
-                <Route path={"tag"} element={<Tag />} />
+             <Route path="/" element={<Tag />} />
+                <Route path="tag" element={<Tag />} />
                 <Route path="/plan/Day1" element={<Page0 />} />
                 <Route path="/plan/Day2" element={<Page1 />} />
                 <Route path="/plan/Day3" element={<Page2 />} />
@@ -74,26 +76,26 @@ function AutoRoutes() {
                 <Route path="/plan/Day6" element={<Page5 />} />
                 <Route path="/plan/Day7" element={<Page6 />} />
                 <Route path="/ecs/Post1" element={<Page7 />} />
-                <Route path="/ecs/Post10" element={<Page8 />} />
-                <Route path="/ecs/Post2" element={<Page9 />} />
-                <Route path="/ecs/Post3" element={<Page10 />} />
-                <Route path="/ecs/Post4" element={<Page11 />} />
-                <Route path="/ecs/Post5" element={<Page12 />} />
-                <Route path="/ecs/Post6" element={<Page13 />} />
+                <Route path="/ecs/Post2" element={<Page8 />} />
+                <Route path="/ecs/Post3" element={<Page9 />} />
+                <Route path="/ecs/Post4" element={<Page10 />} />
+                <Route path="/ecs/Post5" element={<Page11 />} />
+                <Route path="/ecs/Post6" element={<Page12 />} />
+                <Route path="/ecs/post7" element={<Page13 />} />
                 <Route path="/ecs/Post8" element={<Page14 />} />
                 <Route path="/ecs/Post9" element={<Page15 />} />
-                <Route path="/ecs/post7" element={<Page16 />} />
+                <Route path="/ecs/Post10" element={<Page16 />} />
                 <Route path="/kubernetes/AffinityAntiAffinity" element={<Page17 />} />
                 <Route path="/kubernetes/ConfigMapNginxProxy" element={<Page18 />} />
                 <Route path="/kubernetes/ExternalDNSIngress" element={<Page19 />} />
-                <Route path="/kubernetes/HPA" element={<Page20 />} />
-                <Route path="/kubernetes/HealthCheck" element={<Page21 />} />
+                <Route path="/kubernetes/HealthCheck" element={<Page20 />} />
+                <Route path="/kubernetes/HPA" element={<Page21 />} />
                 <Route path="/kubernetes/KopsOnAWS" element={<Page22 />} />
                 <Route path="/kubernetes/KopsSetupGuide" element={<Page23 />} />
                 <Route path="/kubernetes/KubernetesAdvancedDemo" element={<Page24 />} />
                 <Route path="/kubernetes/KubernetesConfigMap" element={<Page25 />} />
-                <Route path="/kubernetes/KubernetesDNSDiscovery" element={<Page26 />} />
-                <Route path="/kubernetes/KubernetesDashboard" element={<Page27 />} />
+                <Route path="/kubernetes/KubernetesDashboard" element={<Page26 />} />
+                <Route path="/kubernetes/KubernetesDNSDiscovery" element={<Page27 />} />
                 <Route path="/kubernetes/KubernetesIngress" element={<Page28 />} />
                 <Route path="/kubernetes/KubernetesSummary" element={<Page29 />} />
                 <Route path="/kubernetes/KubernetesVolume" element={<Page30 />} />
