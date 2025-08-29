@@ -4,7 +4,7 @@ import BlockCode from "@/components/BlockCode";
 
 const Post4 = () => {
     return (
-        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
+        <div className="prose prose-lg mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide w-full max-w-4xl lg:w-4xl">
             <h2 className="text-2xl font-bold text-gray-800 dark:text-white">AWS ECR에 Docker 이미지 푸시</h2>
 
             <p>

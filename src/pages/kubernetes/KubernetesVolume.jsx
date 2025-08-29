@@ -5,7 +5,7 @@ const KubernetesVolume = () => {
     const tags = ["쿠버네티스", "볼륨", "퍼시스턴트 볼륨", "AWS EBS", "Stateful 앱"];
 
     return (
-   <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
+   <div className="prose prose-lg mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide w-full max-w-4xl lg:w-4xl">
 
             <h1 className="text-2xl font-bold mb-4 text-indigo-600 dark:text-sky-400">
                 쿠버네티스 볼륨 & 퍼시스턴트 볼륨 요약

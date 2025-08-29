@@ -3,7 +3,7 @@ import LightboxViewer from "../../components/LightboxViewer.jsx";
 
 const Post7 = () => {
     return (
-        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
+        <div className="prose prose-lg mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide w-full max-w-4xl lg:w-4xl">
             <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
                 AWS ECS + Spring Boot 배포 튜토리얼
             </h1>

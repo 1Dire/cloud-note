@@ -13,7 +13,7 @@ export default function AffinityAntiAffinity() {
     ];
 
     return (
-       <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
+       <div className="prose prose-lg mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide w-full max-w-4xl lg:w-4xl">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500">
                 어피니티 & 안티 어피니티 (Affinity / Anti-Affinity)
             </h1>

@@ -6,7 +6,7 @@ const VolumeProvisioning = () => {
     const tags = ["Kubernetes", "Volume Provisioning", "StorageClass", "EBS", "EFS", "WordPress"];
 
     return (
-        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
+        <div className="prose prose-lg mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide w-full max-w-4xl lg:w-4xl">
 
 
             <h1 className="text-2xl font-bold text-indigo-600 dark:text-sky-500 mb-4">

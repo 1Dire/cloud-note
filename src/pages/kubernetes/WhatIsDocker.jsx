@@ -7,7 +7,7 @@ const WhatIsDocker = () => {
     const tags = ["Docker", "이미지", "컨테이너", "볼륨", "명령어"];
 
     return (
-        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
+        <div className="prose prose-lg mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide w-full max-w-4xl lg:w-4xl">
             <h1 className="text-3xl font-bold mb-4 text-indigo-600 dark:text-sky-500">
                 도커 핵심 개념 정리
             </h1>

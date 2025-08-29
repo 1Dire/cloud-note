@@ -7,7 +7,7 @@ const RdsConnection = () => {
     const tags = ["RDS", "PostgreSQL", "EC2 연동"];
 
     return (
-       <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
+       <div className="prose prose-lg mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide w-full max-w-4xl lg:w-4xl">
             <h1 className="text-3xl font-bold mb-4 text-indigo-600 dark:text-sky-500">
                 EC2에서 RDS(PostgreSQL) 접속하기
             </h1>

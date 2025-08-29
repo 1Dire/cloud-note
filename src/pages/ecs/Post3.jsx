@@ -4,7 +4,7 @@ import BlockCode from "@/components/BlockCode";
 
 const Post3 = () => {
     return (
-        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
+        <div className="prose prose-lg mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide w-full max-w-4xl lg:w-4xl">
             <h2 className="text-2xl font-bold text-gray-800 dark:text-white">AWS IAM 사용자 생성</h2>
 
             <p>

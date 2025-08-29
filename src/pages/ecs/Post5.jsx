@@ -3,7 +3,7 @@ import BlockCode from "@/components/BlockCode";
 
 const Post5 = () => {
     return (
-        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
+        <div className="prose prose-lg mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide w-full max-w-4xl lg:w-4xl">
             <h1 className="text-2xl font-bold text-gray-800 dark:text-white">
                 AWS RDS + PostgreSQL 마이그레이션 기록
             </h1>

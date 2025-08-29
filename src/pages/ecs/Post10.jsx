@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Post10() {
     return (
-        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
+        <div className="prose prose-lg mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide w-full max-w-4xl lg:w-4xl">
             <h1 className="text-2xl font-bold text-gray-800 dark:text-white">
                 HansanPension 프로젝트 배포 후기
             </h1>

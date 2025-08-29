@@ -3,7 +3,7 @@ import BlockCode from "@/components/BlockCode";
 
 const Post6 = () => {
     return (
-        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
+        <div className="prose prose-lg mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide w-full max-w-4xl lg:w-4xl">
             <h1 className="text-2xl font-bold text-gray-800 dark:text-white">
                 Spring Boot 백엔드 Docker 이미지 빌드 & ECR 푸시
             </h1>
