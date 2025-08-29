@@ -91,7 +91,7 @@ export default function Home() {
                 프론트엔드 개발자
               </p>
               <p className="inline-flex items-center gap-2 rounded-full border border-indigo-300/80 dark:border-indigo-700/70 px-3 py-1 text-xs font-semibold text-indigo-700 dark:text-indigo-300">
-                독학으로 시작해 실전으로 확장
+                독학으로 시작해 실전으로부터 생기는 트러블슈팅에 강한 개발자
               </p>
             </div>
             <h1 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
