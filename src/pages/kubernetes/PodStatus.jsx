@@ -12,7 +12,7 @@ export default function PodStatus() {
     ];
 
     return (
-        <section className="space-y-10 p-6 text-gray-800 dark:text-gray-200 leading-relaxed">
+         <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500 mb-4">
                 📦 파드(Pod)의 상태 이해하기
             </h1>
@@ -70,6 +70,6 @@ export default function PodStatus() {
                     <li>자원 부족으로 Pending이 오래간다면, 노드 자원 상태 확인</li>
                 </ul>
             </div>
-        </section>
+        </div>
     );
 }

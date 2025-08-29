@@ -12,7 +12,7 @@ export default function Healthcheck() {
     ];
 
     return (
-        <section className="space-y-10 p-6 text-gray-800 dark:text-gray-200 leading-relaxed">
+ <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500 mb-4">
                 헬스 체크
             </h1>
@@ -101,6 +101,6 @@ spec:
                     <li>애플리케이션 충돌, HTTP 500 오류 등에 자동 대응할 수 있습니다.</li>
                 </ul>
             </div>
-        </section>
+        </div>
     );
 }

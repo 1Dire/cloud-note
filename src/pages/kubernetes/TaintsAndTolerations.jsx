@@ -6,7 +6,7 @@ export default function TaintsAndTolerations() {
     const tags = ["Kubernetes", "Taint", "Toleration", "스케줄링", "노드관리"];
 
     return (
-        <section className="space-y-8 text-gray-800 dark:text-gray-200 leading-relaxed">
+        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500">
                 테인트(Taint) & 톨러레이션(Toleration)
             </h1>
@@ -145,6 +145,6 @@ kubectl taint nodes <NODE> node.kubernetes.io/not-ready:NoExecute-`}</BlockCode>
                     <li>자동 상태 테인트(노드 컨디션)는 클러스터 설정에 따라 활성화됨 (버전에 따라 다름)</li>
                 </ul>
             </div>
-        </section>
+        </div>
     );
 }

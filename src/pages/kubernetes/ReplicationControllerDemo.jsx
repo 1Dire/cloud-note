@@ -12,7 +12,7 @@ export default function ReplicationControllerDemo() {
     ];
 
     return (
-        <section className="space-y-10 p-6 text-gray-800 dark:text-gray-200 leading-relaxed">
+        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500 mb-4">
                 ReplicationController 수평 확장 데모
             </h1>
@@ -72,6 +72,6 @@ export default function ReplicationControllerDemo() {
                     YAML 파일 없이도 동작하지만, 보통은 YAML로 관리하는 것이 버전 관리와 재사용에 유리합니다.
                 </p>
             </div>
-        </section>
+        </div>
     );
 }

@@ -6,7 +6,7 @@ const ServiceDiscoveryDemo = () => {
     const tags = ["쿠버네티스", "서비스탐색", "DNS", "CoreDNS", "kubectl"];
 
     return (
-        <section className="space-y-10 p-6 text-gray-800 dark:text-gray-200 leading-relaxed">
+        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500 mb-4">
                 서비스 탐색 (DNS 기반) 데모
             </h1>
@@ -102,7 +102,7 @@ select * from visits;`}
 kubectl delete -f service-discovery/`}
                 />
             </div>
-        </section>
+        </div>
     );
 };
 

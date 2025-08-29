@@ -7,7 +7,7 @@ const WhatIsKubernetes = () => {
     const tags = ["Kubernetes", "컨테이너", "오케스트레이션", "클러스터", "DevOps"];
 
     return (
-        <section className="space-y-10 text-gray-800 dark:text-gray-200 leading-relaxed">
+        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold mb-4 text-indigo-600 dark:text-sky-500">
                 쿠버네티스란 무엇인가?
             </h1>
@@ -166,7 +166,7 @@ kubectl apply -f app.yaml # 매니페스트 적용`} />
                     <li><strong>kube-proxy</strong>: 네트워크 트래픽을 적절한 파드로 전달</li>
                 </ul>
             </div>
-        </section>
+        </div>
     );
 };
 

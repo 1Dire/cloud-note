@@ -6,7 +6,7 @@ const KubernetesIngress = () => {
     const tags = ["Kubernetes", "Ingress", "Ingress Controller", "NGINX", "트래픽 라우팅"];
 
     return (
-        <section className="space-y-10 p-6 text-gray-800 dark:text-gray-200 leading-relaxed">
+        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500">
                 인그레스와 인그레스 컨트롤러
             </h1>
@@ -76,7 +76,7 @@ spec:
                     <li>마이크로서비스 아키텍처에서 필수적인 컴포넌트</li>
                 </ul>
             </div>
-        </section>
+        </div>
     );
 };
 

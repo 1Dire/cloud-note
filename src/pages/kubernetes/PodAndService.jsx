@@ -7,7 +7,7 @@ const PodAndService = () => {
     const tags = ["Kubernetes", "Pod", "Service", "로드밸런서", "클러스터"];
 
     return (
-        <section className="space-y-10 text-gray-800 dark:text-gray-200 leading-relaxed">
+         <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold mb-4 text-indigo-600 dark:text-sky-500">
                 쿠버네티스의 파드와 서비스
             </h1>
@@ -89,7 +89,7 @@ const PodAndService = () => {
                     <li><strong>Ingress / LoadBalancer:</strong> 외부 트래픽을 클러스터로 전달</li>
                 </ul>
             </div>
-        </section>
+        </div>
     );
 };
 

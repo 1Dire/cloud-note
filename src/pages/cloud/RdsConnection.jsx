@@ -7,7 +7,7 @@ const RdsConnection = () => {
     const tags = ["RDS", "PostgreSQL", "EC2 연동"];
 
     return (
-        <section className="space-y-8 text-gray-800 dark:text-gray-200">
+       <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold mb-4 text-indigo-600 dark:text-sky-500">
                 EC2에서 RDS(PostgreSQL) 접속하기
             </h1>
@@ -50,7 +50,7 @@ const RdsConnection = () => {
                     <BlockCode language="sql" code={`SELECT NOW();`} />
                 </li>
             </ol>
-        </section>
+        </div>
     );
 };
 

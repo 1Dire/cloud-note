@@ -7,7 +7,7 @@ const ReplicaSetAndDeployment = () => {
     const tags = ["Kubernetes", "ReplicaSet", "Deployment", "레플리카", "오케스트레이션"];
 
     return (
-        <section className="space-y-10 text-gray-800 dark:text-gray-200 leading-relaxed">
+       <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold mb-4 text-indigo-600 dark:text-sky-500">
                 ReplicaSet과 Deployment란?
             </h1>
@@ -104,7 +104,7 @@ spec:
                     <li><strong>Deployment:</strong> 파드를 배포하고 ReplicaSet을 관리하는 상사</li>
                 </ul>
             </div>
-        </section>
+        </div>
     );
 };
 

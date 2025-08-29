@@ -18,7 +18,7 @@ const CreateEC2 = () => {
     ];
 
     return (
-        <section className="space-y-8 text-gray-800 dark:text-gray-200">
+     <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold mb-4 text-indigo-600 dark:text-sky-500">
                 EC2 인스턴스 생성
             </h1>
@@ -117,7 +117,7 @@ const CreateEC2 = () => {
                     <LightboxViewer src="../cloud/createEC2/8.png" alt="생성 완료 화면"/>
                 </li>
             </ol>
-        </section>
+        </div>
     );
 };
 

@@ -13,7 +13,7 @@ const WhatIsCloud = () => {
     ];
     return (
         <>
-            <section className="space-y-8 text-gray-800 dark:text-gray-200">
+            <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
                 <h1 className="text-3xl font-bold mb-4 text-indigo-600 dark:text-sky-500">
                     ☁️ 클라우드란 무엇인가?
                 </h1>
@@ -199,7 +199,7 @@ const WhatIsCloud = () => {
                         </p>
                     </div>
                 </div>
-            </section>
+            </div>
 
         </>
     );

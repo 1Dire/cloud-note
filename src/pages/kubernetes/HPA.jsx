@@ -6,7 +6,7 @@ export default function HPA() {
     const tags = ["Kubernetes", "HPA", "Autoscaling", "Metrics Server", "Minikube"];
 
     return (
-        <section className="space-y-8 text-gray-800 dark:text-gray-200 leading-relaxed">
+        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500">
                 HPA (Horizontal Pod Autoscaler) 오토스케일링 데모
             </h1>
@@ -132,6 +132,6 @@ kubectl delete pod load-generator`}
                 <li><strong>HPA가 동작 안 함</strong> → 파드에 <code>resources.requests.cpu</code> 설정했는지 확인</li>
                 <li><strong>스케일 느림</strong> → HPA는 안정화 지연이 있어 1~2분 정도 기다리기</li>
             </ul>
-        </section>
+        </div>
     );
 }

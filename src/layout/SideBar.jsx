@@ -92,7 +92,7 @@ const SideBar = ({ isOpen, onClose }) => {
                         <SidebarItemGroup>
                             <SidebarItem
                                 as={Link}
-                                to="/"
+                                to="/tag"
                                 icon={() => <FaTag className={pathname === "/tag" ? "text-white" : ""} />}
                                 className={`custom-sidebar-item ${pathname === "/tag" ? activeClass : ""}`}
                                 onClick={onClose}

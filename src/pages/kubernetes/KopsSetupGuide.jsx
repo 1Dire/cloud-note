@@ -7,7 +7,7 @@ const KopsSetupGuide = () => {
     const tags = ["Kops", "Kubernetes", "AWS", "클러스터", "Vagrant", "DNS"];
 
     return (
-        <section className="space-y-10 text-gray-800 dark:text-gray-200 leading-relaxed">
+       <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500">
                 Kops 클러스터 구성 – AWS & DNS 설정 가이드
             </h1>
@@ -131,7 +131,7 @@ kubectl get service`}
                 <p>DNS 확인 명령 예시:</p>
                 <BlockCode language="bash" code={`host -t NS kubernetes.newtech.academy`} />
             </div>
-        </section>
+        </div>
     );
 };
 

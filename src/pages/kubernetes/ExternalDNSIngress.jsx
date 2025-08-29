@@ -7,7 +7,7 @@ const ExternalDNSIngress = () => {
     const tags = ["Kubernetes", "Ingress", "Ingress Controller", "ExternalDNS", "DNS", "로드밸런서"];
 
     return (
-        <section className="space-y-10 p-6 text-gray-800 dark:text-gray-200 leading-relaxed">
+       <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500">
                 외부 DNS + 인그레스 개요
             </h1>
@@ -111,7 +111,7 @@ spec:
                     <li>HTTP/HTTPS 트래픽에 최적화 (TCP/UDP는 별도 방식 필요)</li>
                 </ul>
             </div>
-        </section>
+        </div>
     );
 };
 

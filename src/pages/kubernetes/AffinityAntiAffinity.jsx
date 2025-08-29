@@ -13,7 +13,7 @@ export default function AffinityAntiAffinity() {
     ];
 
     return (
-        <section className="space-y-8 text-gray-800 dark:text-gray-200 leading-relaxed">
+       <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500">
                 어피니티 & 안티 어피니티 (Affinity / Anti-Affinity)
             </h1>
@@ -225,6 +225,6 @@ kubectl get pods -o wide`}
                     </li>
                 </ul>
             </div>
-        </section>
+        </div>
     );
 }

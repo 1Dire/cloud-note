@@ -7,7 +7,7 @@ const CreateRDS = () => {
     const tags = ["RDS", "MySQL", "DB 생성"];
 
     return (
-        <section className="space-y-8 text-gray-800 dark:text-gray-200">
+        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold mb-4 text-indigo-600 dark:text-sky-500">
                 AWS RDS 인스턴스 생성
             </h1>
@@ -76,7 +76,7 @@ const CreateRDS = () => {
                     <LightboxViewer src="../cloud/createRDS/8.png" alt="엔드포인트 확인" />
                 </li>
             </ol>
-        </section>
+        </div>
     );
 };
 

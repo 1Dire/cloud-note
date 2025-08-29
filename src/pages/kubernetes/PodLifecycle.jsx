@@ -14,7 +14,7 @@ export default function PodLifecycle() {
     ];
 
     return (
-        <section className="space-y-10 p-6 text-gray-800 dark:text-gray-200 leading-relaxed">
+       <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500 mb-4">
                 파드 수명 주기(Pod Lifecycle)
             </h1>
@@ -94,6 +94,6 @@ kubectl exec -it lifecycle-demo -- cat /status`} />
                     <li>수명 주기 기능은 실운영 환경에서 안정성과 제어성을 높여줍니다.</li>
                 </ul>
             </div>
-        </section>
+        </div>
     );
 }

@@ -6,7 +6,7 @@ const KubernetesConfigMap = () => {
     const tags = ["Kubernetes", "ConfigMap", "볼륨 마운트", "환경 변수"];
 
     return (
-        <section className="space-y-10 p-6 text-gray-800 dark:text-gray-200 leading-relaxed">
+        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500 mb-4">
                 Kubernetes ConfigMap 이해 및 활용
             </h1>
@@ -80,7 +80,7 @@ volumeMounts:
                     <li>이미지를 변경하지 않고도 설정을 유연하게 업데이트할 수 있습니다.</li>
                 </ul>
             </div>
-        </section>
+        </div>
     );
 };
 

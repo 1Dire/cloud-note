@@ -5,7 +5,7 @@ const KubernetesSummary = () => {
     const tags = ["Kubernetes", "리소스", "개념정리", "DevOps", "운영"];
 
     return (
-        <section className="space-y-10 text-gray-800 dark:text-gray-200 leading-relaxed">
+        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold mb-4 text-indigo-600 dark:text-sky-500">
                 쿠버네티스 핵심 리소스 한눈에 보기
             </h1>
@@ -31,7 +31,7 @@ const KubernetesSummary = () => {
                     <li><strong>크론잡 (CronJob):</strong> <strong>스케줄된 반복 작업</strong> 실행 (리눅스의 cron처럼)</li>
                 </ul>
             </div>
-        </section>
+        </div>
     );
 };
 

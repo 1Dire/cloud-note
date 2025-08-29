@@ -6,7 +6,7 @@ const StatefulSetCassandra = () => {
     const tags = ["Kubernetes", "StatefulSet", "Cassandra", "Headless Service", "PVC", "Stateful App"];
 
     return (
-        <section className="space-y-8 p-6 text-gray-800 dark:text-gray-200 leading-relaxed">
+ <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500">
                 StatefulSet로 Cassandra 클러스터 배포 데모
             </h1>
@@ -171,7 +171,7 @@ kubectl get pvc | grep cassandra-data   # 기존 PVC 재사용 확인`}
                     <li>순서 보장: 0 → 1 → 2 순서로 생성, 역순으로 종료.</li>
                 </ul>
             </div>
-        </section>
+        </div>
     );
 };
 

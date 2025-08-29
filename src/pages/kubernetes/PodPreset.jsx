@@ -6,7 +6,7 @@ const PodPreset= () => {
     const tags = ["Kubernetes", "PodPreset", "자동 주입", "ConfigMap", "Secret", "Best Practice"];
 
     return (
-        <section className="space-y-8 p-6 text-gray-800 dark:text-gray-200 leading-relaxed">
+ <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500">
                 PodPreset란? (파드 자동 설정 주입)
             </h1>
@@ -95,7 +95,7 @@ spec:
                 현재는 대체 도구(Helm/Kustomize/Webhook) 사용이 일반적이며, 문서화·일관성·승인 절차 측면에서
                 조직 표준에 맞춘 방법을 선택하는 것이 좋습니다.
             </div>
-        </section>
+        </div>
     );
 };
 

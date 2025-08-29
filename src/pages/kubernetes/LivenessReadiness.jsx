@@ -12,7 +12,7 @@ export default function LivenessReadiness() {
     ];
 
     return (
-        <section className="space-y-10 p-6 text-gray-800 dark:text-gray-200 leading-relaxed">
+        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500 mb-4">
                 🔎 Liveness와 Readiness Probe
             </h1>
@@ -88,6 +88,6 @@ readinessProbe:
                     <li>liveness 실패 시 컨테이너 자체를 재시작</li>
                 </ul>
             </div>
-        </section>
+        </div>
     );
 }

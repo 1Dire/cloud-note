@@ -3,7 +3,7 @@ import BlockCode from "../../components/BlockCode.jsx";
 
 const KubernetesAdvancedDemo = () => {
     return (
-        <section className="space-y-10 text-gray-800 dark:text-gray-200">
+        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500">
                 쿠버네티스 데모 실습 요약 & 고급 명령어
             </h1>
@@ -87,7 +87,7 @@ const KubernetesAdvancedDemo = () => {
                     <li><strong>Volume:</strong> 컨테이너 종료 후에도 데이터를 유지하는 스토리지</li>
                 </ul>
             </div>
-        </section>
+        </div>
     );
 };
 

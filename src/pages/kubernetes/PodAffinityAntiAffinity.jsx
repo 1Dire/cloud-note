@@ -13,7 +13,7 @@ export default function PodAffinityAntiAffinity() {
     ];
 
     return (
-        <section className="space-y-8 text-gray-800 dark:text-gray-200 leading-relaxed">
+        <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500">
                 파드 간 어피니티 & 안티어피니티 (개념 + 데모)
             </h1>
@@ -257,6 +257,6 @@ kubectl get nodes --show-labels | sed -n '/NAME/,$p'`}
                     꼭 필요한 경우에만 <code>required...</code>로 승격하세요.
                 </p>
             </div>
-        </section>
+        </div>
     );
 }
