@@ -66,8 +66,8 @@ function AutoRoutes() {
            
             <Route path="/test" element={<Home />} />
             <Route path="/" element={<Layout />}>
-             <Route path="/" element={<Tag />} />
-                <Route path="tag" element={<Tag />} />
+             <Route path="/" element={<Home />} />
+                <Route path="/tag" element={<Tag />} />
                 <Route path="/plan/Day1" element={<Page0 />} />
                 <Route path="/plan/Day2" element={<Page1 />} />
                 <Route path="/plan/Day3" element={<Page2 />} />
