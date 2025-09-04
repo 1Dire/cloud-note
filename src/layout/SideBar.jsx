@@ -17,7 +17,8 @@ import {
   FaHouse, FaLaptop, FaTag, FaBookOpen, FaCloud, FaSitemap, FaServer,
   FaGithub, FaArrowUpRightFromSquare, FaXmark,
 } from "react-icons/fa6";
-import { SiKubernetes } from "react-icons/si";
+import { SiKubernetes ,SiThreedotjs} from "react-icons/si";
+import {threeRoutes} from "../routes/threeRoutes.jsx";
 
 const SideBar = ({ isOpen = false, onClose = () => {} }) => {
   const { pathname } = useLocation();
@@ -92,7 +93,22 @@ const SideBar = ({ isOpen = false, onClose = () => {} }) => {
           ))}
         </SidebarCollapse>
       </SidebarItemGroup>
-
+        {/* Three.js */}
+        <SidebarItemGroup>
+            <SidebarCollapse icon={SiThreedotjs} label="Three.js">
+                {threeRoutes.map(({ path, label }) => (
+                    <SidebarItem
+                        key={path}
+                        as={Link}
+                        to={path}
+                        className={`custom-sidebar-item ${pathname === path ? activeClass : ""}`}
+                        onClick={onClose}
+                    >
+                        {label}
+                    </SidebarItem>
+                ))}
+            </SidebarCollapse>
+        </SidebarItemGroup>
       {/* Cloud */}
       <SidebarItemGroup>
         <SidebarCollapse icon={FaCloud} label="Cloud">
