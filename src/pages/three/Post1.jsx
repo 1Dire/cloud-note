@@ -322,10 +322,7 @@ export default function Experience() {
           <li>그리드는 fwidth로 안티에일리어싱, 멀리서 페이드로 보기 좋게 만든다.</li>
           <li>물리 디버그는 <code>#debug</code> 해시로 토글해서 배포 환경에서도 쉽게 켜고 끌 수 있다.</li>
         </ul>
-        <p>
-          다음 편에서는 입력 흐름(입력 → 물리 → 뷰 → 월드 → 렌더)과 간단한 차량(레이캐스트) 골격을 붙여본다. 값 튜닝은
-          tweakpane으로 정리할 예정.
-        </p>
+
       </div>
   );
 };
