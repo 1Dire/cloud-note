@@ -60,6 +60,7 @@ import Page54 from "@/pages/gitAction/Post2.jsx";
 import Page55 from "@/pages/gitAction/Post3.jsx";
 import Page56 from "@/pages/gitAction/Post4.jsx";
 import Page57 from "@/pages/three/Post1.jsx";
+import Page58 from "@/pages/three/Post2.jsx";
 
 function AutoRoutes() {
     return (
@@ -127,6 +128,7 @@ function AutoRoutes() {
                 <Route path="/gitAction/Post3" element={<Page55 />} />
                 <Route path="/gitAction/Post4" element={<Page56 />} />
                 <Route path="/three/Post1" element={<Page57 />} />
+                <Route path="/three/Post2" element={<Page58 />} />
                 <Route path="*" element={<div>404: Page Not Found</div>} />
             </Route>
         </Routes>
