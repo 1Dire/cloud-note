@@ -1,5 +1,6 @@
 // src/pages/three/Post3.jsx
 import React from "react";
+import LightboxViewer from "../../components/LightboxViewer.jsx";
 
 const Post3 = () => {
     return (
@@ -81,6 +82,7 @@ const Post3 = () => {
                 <li>물리 디버그는 URL에 <code>#debug</code>를 붙여 토글.</li>
                 <li>세부 구현은 저장소 버전과 다를 수 있음(데모 우선 커스터마이즈).</li>
             </ul>
+            <LightboxViewer src="../three/post3/1.png" alt="AMI 및 인스턴스 유형 선택"/>
         </div>
     );
 };
