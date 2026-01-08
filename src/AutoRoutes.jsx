@@ -63,6 +63,7 @@ import Page57 from "@/pages/three/Post1.jsx";
 import Page58 from "@/pages/three/Post2.jsx";
 import Page59 from "@/pages/three/Post3.jsx";
 import Page60 from "@/pages/three/Post4.jsx";
+import Page61 from "@/pages/bingo/Post1.jsx";
 
 function AutoRoutes() {
     return (
@@ -133,6 +134,7 @@ function AutoRoutes() {
                 <Route path="/three/Post2" element={<Page58 />} />
                 <Route path="/three/Post3" element={<Page59 />} />
                 <Route path="/three/Post4" element={<Page60 />} />
+                <Route path="/bingo/Post1" element={<Page61 />} />
                 <Route path="*" element={<div>404: Page Not Found</div>} />
             </Route>
         </Routes>
