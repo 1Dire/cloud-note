@@ -1,4 +1,4 @@
-// scripts/generateRoutes.js
+// node scripts/generateRoutes.js
 import fs from "fs";
 import path from "path";
 
