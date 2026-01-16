@@ -8,6 +8,7 @@ export const threeRoutes = [
     {path: "/post4", label: "섬 만들기"},
     {path: "/post5", label: "쉐이더로 잔디만들기"},
     {path: "/post6", label: "쉐이더로 잔디만들기2"},
+    {path: "/post7", label: "Synthwave"},
 ].map(route => ({
     ...route,
     path: `/${foldName}${route.path}`,
