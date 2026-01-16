@@ -1,4 +1,4 @@
-// src/pages/three/Post7.jsx
+// src/pages/three/post7.jsx
 import React from "react";
 import LightboxViewer from "../../components/LightboxViewer.jsx";
 

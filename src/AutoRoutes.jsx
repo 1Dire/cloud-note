@@ -65,7 +65,7 @@ import Page59 from "@/pages/three/Post3.jsx";
 import Page60 from "@/pages/three/Post4.jsx";
 import Page61 from "@/pages/three/Post5.jsx";
 import Page62 from "@/pages/three/Post6.jsx";
-import Page63 from "@/pages/three/Post7.jsx";
+import Page63 from "@/pages/three/post7.jsx";
 import Page64 from "@/pages/bingo/Post1.jsx";
 
 function AutoRoutes() {
