@@ -6,7 +6,7 @@ const Post7 = () => {
     return (
         <div className="prose prose-lg max-w-4xl mx-auto px-4 dark:prose-invert leading-relaxed tracking-wide">
             <h1 className="text-3xl font-bold text-indigo-600 dark:text-sky-500 mb-8">
-                React Three Fiber로 구현한 Synthwave
+             Synthwave
             </h1>
 
             {/* --- 프롤로그 --- */}
